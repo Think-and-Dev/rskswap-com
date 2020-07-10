@@ -129,7 +129,7 @@ const Footer = () => {
     <StyledFooter>
       <StyledSection>
         <StyledFooterSection>
-          <EmailSection />
+          {/* <EmailSection /> */}
           <Commit>
             Deployed commit:{' '}
             <code>
@@ -142,7 +142,7 @@ const Footer = () => {
               </a>
             </code>
           </Commit>
-          <p>© 2020 Uniswap</p>
+          <p>© 2020 Think and Dev</p>
           {/* <div>
             <label>
               <input type="checkbox" onChange={() => themeContext.toggleDark()} checked={themeContext.isDark} /> Dark

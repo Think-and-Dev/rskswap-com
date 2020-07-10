@@ -6,12 +6,13 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Uniswap`,
-    description: `Automated liquidity protocol on Ethereum`,
-    author: `@UniswapProtocol`,
+    title: `Uniswap Rsk`,
+    description: `Automated liquidity protocol on RSK`,
+    author: `@ThinkAndDev`,
     menulinks: menu,
-    siteUrl: `https://uniswap.org`,
-    repository: `https://github.com/Uniswap/uniswap-site-v2`,
+    cardlinks: cards,
+    siteUrl: `https://uniswap-rsk.web.app/`,
+    repository: `https://github.com/Think-and-Dev/uniswap-org-rsk`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `master`
   },
   plugins: [
@@ -93,11 +94,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-twitter-cards`,
             options: {
-              title: 'Uniswap', // website title
+              title: 'Uniswap RSK', // website title
               separator: '|', // default
-              author: '@UniswapProtocol',
+              author: '@ThinkAndDev',
               background: require.resolve('./static/images/twitter_card_bg.jpg'), // path to 1200x630px file or hex code, defaults to black (#000000)
-              fontColor: '#FF3093', // defaults to white (#ffffff)
+              fontColor: '##04B43C', // defaults to white (#ffffff)
               fontStyle: 'sans-serif', // default
               titleFontSize: 124, // default
               fontFile: require.resolve('./static/fonts/Inferi-Normal.ttf') // will override fontStyle - path to custom TTF font

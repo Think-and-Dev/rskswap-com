@@ -100,7 +100,7 @@ Responsible for formatting percentages (10% instead of 0.1).
 ## Example
 
 ```typescript
-import { Percent } from '@uniswap/sdk'
+import { Percent } from '@thinkanddev/uniswap-sdk-rsk'
 
 const percent = new Percent('60', '100')
 console.log(percent.toSignificant(2)) // 60
@@ -125,9 +125,9 @@ Responsible for formatting token amounts with specific decimal places.
 ## Example
 
 ```typescript
-import { Token, TokenAmount } from '@uniswap/sdk'
+import { Token, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
 
-const FRIED = new Token(ChainId.MAINNET, '0xfa1aFe1000000000000000000000000000000000', 18, 'FRIED', 'Beans')
+const FRIED = new Token(ChainId.RSK_MAINNET, '0xfa1aFe1000000000000000000000000000000000', 18, 'FRIED', 'Beans')
 
 const tokenAmount = new TokenAmount(FRIED, '3000000000000000000')
 console.log(tokenAmount.toExact()) // 3
@@ -188,16 +188,16 @@ Responsible for denominating the relative price between two tokens. Denominator 
 ## Example
 
 ```typescript
-import { ChainId, WETH as WETHs, Token, Price } from '@uniswap/sdk'
+import { ChainId, WETH as WETHs, Token, Price } from '@thinkanddev/uniswap-sdk-rsk'
 
-const WETH = WETHs[ChainId.MAINNET]
-const ABC = new Token(ChainId.MAINNET, '0xabc0000000000000000000000000000000000000', 18, 'ABC')
+const WRBTC = WETHs[ChainId.RSK_MAINNET]
+const ABC = new Token(ChainId.RSK_MAINNET, '0xabc0000000000000000000000000000000000000', 18, 'ABC')
 
-const price = new Price(WETH, ABC, '1000000000000000000', '123000000000000000000')
+const price = new Price(WRBTC, ABC, '1000000000000000000', '123000000000000000000')
 console.log(price.toSignificant(3)) // 123
 ```
 
-This example shows the ETH/XYZ price, where ETH is the base token, and XYZ is the quote token. The price is constructed from an amount of XYZ (the numerator) / an amount of WETH (the denominator).
+This example shows the RBTC/ABC price, where RBTC is the base token, and ABC is the quote token. The price is constructed from an amount of ABC (the numerator) / an amount of WRBTC (the denominator).
 
 ## Static Methods
 

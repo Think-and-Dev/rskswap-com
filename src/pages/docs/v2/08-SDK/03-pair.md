@@ -7,15 +7,15 @@ tags: sdk, documentation
 constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount)
 ```
 
-The Pair entity represents a Uniswap pair with a balance of each of its pair tokens.
+The Pair entity represents a Uniswap RSK pair with a balance of each of its pair tokens.
 
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair } from '@uniswap/sdk'
+import { ChainId, Token, TokenAmount, Pair } from '@thinkanddev/uniswap-sdk-rsk'
 
-const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
-const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
+const HOT = new Token(ChainId.RSK_MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
+const NOT = new Token(ChainId.RSK_MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
 
 const pair = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))
 ```

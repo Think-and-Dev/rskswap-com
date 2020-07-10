@@ -7,7 +7,7 @@ This documentation covers Uniswap-specific functionality. For ERC-20 functionali
 
 # Code
 
-[`UniswapV2Pair.sol`](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)
+[`UniswapV2Pair.sol`](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)
 
 # Address
 

@@ -146,18 +146,18 @@ const IndexPage = props => {
 
   return (
     <Layout path={props.location.pathname}>
-      <Ticker />
+      {/* <Ticker /> */}
       <BG />
       <SEO
         title="Home"
         path={props.location.pathname}
-        description={'A fully decentralized protocol for automated liquidity provision on Ethereum'}
+        description={'A fully decentralized protocol for automated liquidity provision on RSK'}
       />
       <StyledBody>
         <StyledTitle>
           <StyledBodyTitle>Automated Liquidity Protocol.</StyledBodyTitle>
           <span>
-            <Button href="https://app.uniswap.org/">Launch App</Button>
+            <Button href="https://uniswap-rsk.web.app/">Launch App</Button>
             <Button to="/docs" as={Link} outlined>
               Read the docs
             </Button>
@@ -283,7 +283,7 @@ const SummarySection = props => {
       </StyledImgSection>
       <StyledImgSection>
         <h1>
-          <b>Uniswap</b> is a fully decentralized protocol for automated liquidity provision on Ethereum.
+          <b>Uniswap</b> is a fully decentralized protocol for automated liquidity provision on RSK.
         </h1>
 
         <p>
@@ -372,7 +372,7 @@ const GoalSection = () => {
       <StyledGoal>
         <h1>Mission</h1>
         <p>
-          <b>Uniswap</b> is transparent, censorship-resistant financial infrastructure for Ethereum.
+          <b>Uniswap</b> is transparent, censorship-resistant financial infrastructure for RSK.
         </p>
         <p>Uniswap lowers barriers of entry to financial participation and removes central points of failure.</p>
         <p>

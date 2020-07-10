@@ -12,10 +12,10 @@ The Trade entity represents a fully specified trade along a route. This entity s
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair, TradeType, Route } from '@uniswap/sdk'
+import { ChainId, Token, TokenAmount, Pair, Route, TradeType, Trade } from '@thinkanddev/uniswap-sdk-rsk'
 
-const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
-const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
+const HOT = new Token(ChainId.RSK_MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
+const NOT = new Token(ChainId.RSK_MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
 const HOT_NOT = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))
 const NOT_TO_HOT = new Route([HOT_NOT], NOT)
 

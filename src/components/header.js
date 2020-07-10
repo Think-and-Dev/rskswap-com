@@ -257,7 +257,7 @@ const Header = props => {
         <StyledButton type="button" onClick={toggleDarkMode}>
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </StyledButton>
-        {props.path !== undefined && <StyledTradeLink href="https://app.uniswap.org/">Launch App</StyledTradeLink>}
+        {props.path !== undefined && <StyledTradeLink href="https://uniswap-rsk.web.app/">Launch App</StyledTradeLink>}
       </StyledNav>
     </StyledHeader>
   )

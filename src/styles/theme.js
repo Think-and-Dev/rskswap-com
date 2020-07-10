@@ -45,7 +45,7 @@ export const theme = darkMode => ({
   doveGray: darkMode ? '#C4C4C4' : '#737373',
 
   colors: {
-    blue1: darkMode ? '#2F80ED' : '#D4E4FA',
+    blue1: darkMode ? '#00B43C' : '#D4E4FA',
     blue2: darkMode ? '#1966D2' : '#A9C8F5',
     blue3: darkMode ? '#165BBB' : '#7DACF0',
     blue4: darkMode ? '#2D47A6' : '#5190EB',
@@ -71,7 +71,8 @@ export const theme = darkMode => ({
     green1: '#E6F3EC',
     green2: '#27AE60',
 
-    pink1: darkMode ? '#2F80ED' : '#FF007A',
+    // pink1: darkMode ? '#00FF85' : '#04B43C',
+    pink1: darkMode ? '#04B43C' : '#04B43C',
     pink2: '#FF8EC4',
     pink3: '#FFD7EA',
 
@@ -80,8 +81,11 @@ export const theme = darkMode => ({
 
     red1: '#FF6871',
 
-    link: darkMode ? '#2F80ED' : '#FF007A',
-    invertedLink: darkMode ? '#2F80ED' : '#FF007A'
+    // link: darkMode ? '#00FF85' : '#04B43C',
+    // invertedLink: darkMode ? '#04B43C' : '#00FF85'
+
+    link: darkMode ? '#04B43C' : '#04B43C',
+    invertedLink: darkMode ? '#04B43C' : '#04B43C'
   },
 
   shadows: {
