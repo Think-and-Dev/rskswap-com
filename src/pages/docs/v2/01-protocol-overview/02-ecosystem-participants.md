@@ -28,9 +28,9 @@ There are a several categories of traders in the protocol ecosystem:
 
 - Speculators use a variety of community built tools and products to swap tokens using liquidity pulled from the Uniswap protocol.
 
-- Arbitrage bots seek profits by comparing prices across different platforms to find an edge. (Though it might seem extractive, these bots actually help equalize prices across broader Ethereum markets and keep things fair.)
+- Arbitrage bots seek profits by comparing prices across different platforms to find an edge. (Though it might seem extractive, these bots actually help equalize prices across broader RSK markets and keep things fair.)
 
-- DAPP users buy tokens on Uniswap for use in other applications on Ethereum.
+- DAPP users buy tokens on Uniswap for use in other applications on RSK.
 
 - Smart contracts that execute trades on the protocol by implementing swap functionality (from products like DEX aggregators to custom Solidity scripts).
 
@@ -38,7 +38,7 @@ In all cases, trades are subject to the same flat fee for trading on the protoco
 
 # Developers/Projects
 
-There are far too many ways Uniswap is used in the wider Ethereum ecosystem to count, but some examples include:
+There are far too many ways Uniswap is used in the wider RSK ecosystem to count, but some examples include:
 
 - The open-source, accessible nature of Uniswap means there are countless UX experiments and front-ends built to offer access to Uniswap functionality. You can find Uniswap functions in most of the major DeFi dashboard projects. There are also many [Uniswap-specific tools](https://github.com/Uniswap/universe) built by the community.
 

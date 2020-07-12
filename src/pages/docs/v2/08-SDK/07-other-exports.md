@@ -105,4 +105,4 @@ import { InsufficientInputAmountError } from '@thinkanddev/uniswap-sdk-rsk'
 import { WETH } from '@thinkanddev/uniswap-sdk-rsk'
 ```
 
-An object whose values are <Link to='/docs/v2/smart-contracts/router/#weth'>WRBTC</Link> <Link to='/docs/v2/SDK/token'>Token</Link> instances, indexed by [ChainId](#chainid).
+An object whose values are <Link to='/docs/v2/smart-contracts/router/#weth'>WRBTC</Link> <Link to='/docs/v2/SDK/token'>Token</Link> instances, indexed by [ChainId](#chainid). The name may be confusing as it's the one used by the Uniswap Protocol on Ethereum.

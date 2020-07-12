@@ -66,7 +66,7 @@ Information about a pair. Includes references to each token within the pair, vol
 | volumeUSD            | BigDecimal                            | total amount swapped all time in this pair stored in USD         |
 | txCount              | BigInt                                | all time amount of transactions on this pair                     |
 | createdAtTimestamp   | BigInt                                | timestamp contract was created                                   |
-| createdAtBlockNumber | BigInt                                | Ethereum block contract was created                              |
+| createdAtBlockNumber | BigInt                                | RSK block contract was created                              |
 | liquidityPositions   | [LiquidityPosition]                   | array of liquidity providers, used as a reference to LP entities |
 | mints                | [Mint]                                | array of all Mint events on this pair                            |
 | burns [Burn]         | array of all Burn events on this pair |
@@ -98,11 +98,11 @@ information from the pair itself can be used to provide position sizes, token de
 
 ### Transaction
 
-Transaction entities are created for each Ethereum transaction that contains an interaction within Uniswap contracts. This subgraph tracks Mint, Burn, and Swap events on the Uniswap core contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
+Transaction entities are created for each RSK transaction that contains an interaction within Uniswap contracts. This subgraph tracks Mint, Burn, and Swap events on the Uniswap core contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
 
 | Field Name  | Value Type | Description                                               |
 | ----------- | ---------- | --------------------------------------------------------- |
-| id          | ID         | Ethereum transaction hash                                 |
+| id          | ID         | RSK transaction hash                                 |
 | blockNumber | BigInt     | block transaction was mined in                            |
 | timestamp   | BigInt     | timestamp for transaction                                 |
 | mints       | [Mint]     | array of Mint events within the transaction, 0 or greater |

@@ -9,7 +9,7 @@ import BG from '../components/bg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import MiniCard from '../components/minicard'
-import Discord from '../images/discord.inline.svg'
+// import Discord from '../images/discord.inline.svg'
 
 const StyledAbout = styled.div`
   display: grid;
@@ -147,14 +147,14 @@ const About = props => {
           >
             About
           </StyledHeadingLink>
-          <StyledHeadingLink
+          {/* <StyledHeadingLink
             onClick={() => {
               scrollTo('#jobs')
               window.history.pushState({}, '', '#jobs')
             }}
           >
             Jobs
-          </StyledHeadingLink>
+          </StyledHeadingLink> */}
           <StyledHeadingLink
             onClick={() => {
               scrollTo('#contact')
@@ -188,14 +188,14 @@ const About = props => {
               The Uniswap protocol is developed by a small team in Brooklyn, NY alongside collaborators all across the
               world.
             </p>
-            <p>We are committed to open source software and building on the decentralized web.</p>
+            <p>Uniswap RSK is a fork of this great project adapted to the RSK network</p>
             <p>
-              You can read about how Uniswap got started
-              <Link to="/blog/uniswap-history/"> here.</Link>
+              You can read about how Uniswap Protocol got started
+              <Link to="https://uniswap.org/blog/uniswap-history/"> here.</Link>
             </p>
           </StyledSectionFlex>
 
-          <StyledSectionFlex id="jobs" style={{ flexDirection: 'column' }}>
+          {/* <StyledSectionFlex id="jobs" style={{ flexDirection: 'column' }}>
             <h1 style={{ width: '100%' }}>Jobs</h1>
             <p>We are looking for talented people to join our team!</p>
 
@@ -224,9 +224,9 @@ const About = props => {
               Compensation will be competitive and commensurate with experience. This is a full time role which includes
               health insurance and other benefits.
             </p>
-          </StyledSectionFlex>
+          </StyledSectionFlex> */}
 
-          <StyledSectionFlex id="contact" style={{ flexDirection: 'column' }}>
+          {/* <StyledSectionFlex id="contact" style={{ flexDirection: 'column' }}>
             <h1 style={{ width: '100%' }}>Contact</h1>
             <p>
               To get in touch, please email <a href="mailto:contact@uniswap.org">contact@uniswap.org</a>
@@ -236,7 +236,7 @@ const About = props => {
               As a small team <strong>we are unable to offer support</strong> in most cases but encourage anyone facing
               issues with their wallet, transaction or Uniswap related question to join our active community discord.
             </p>
-          </StyledSectionFlex>
+          </StyledSectionFlex> */}
           <StyledSectionFlex id="community" style={{ paddingTop: '2rem' }}>
             <h1 style={{ width: '100%' }}>Community</h1>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>

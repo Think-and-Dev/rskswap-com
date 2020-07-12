@@ -1,8 +1,71 @@
-const menu = require('./src/utils/menu')
+const menu = [
+  {
+    name: 'Products',
+    sublinks: [
+      {
+        name: 'Interface',
+        link: 'https://uniswap-rsk.web.app/',
+        description: 'Swap tokens and supply liquidity'
+      }
+    ]
+  },
+  {
+    name: 'Developers',
+    sublinks: [
+      {
+        name: 'Documentation',
+        link: '/docs',
+        description: 'Comprehensive smart contract and frontend integration docs'
+      },
+      { name: 'Github', link: 'https://github.com/Think-and-Dev' },
+      { name: 'Whitepaper', link: '/whitepaper.pdf' },
+      { name: 'Audit', link: '/audit.html' }
+    ]
+  },
+  {
+    name: 'Community',
+    sublinks: [
+      { name: 'Twitter', link: 'https://twitter.com/UniswapProtocol' },
+      { name: 'Discord', link: 'https://discord.gg/EwFs3Pp' },
+      { name: 'Reddit', link: 'https://www.reddit.com/r/Uniswap' }
+    ]
+  },
+  {
+    name: 'Info',
+    sublinks: [
+      { name: 'About', link: '/about' },
+      { name: 'Brand Assets', link: '/about#brand-assets' }
+    ]
+  }
+]
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-})
+const cards = [
+  {
+    slug: 'https://uniswap-rsk.web.app/',
+    cardTitle: 'Swap any token on RSK',
+    cardDesc: 'Use the Uniswap interface or integrate into your project using the SDK.',
+    cardButton: 'Swap now'
+  },
+  {
+    slug: '/docs',
+    cardTitle: 'Add liquidity for any project',
+    cardDesc: 'Add liquidity or create an pool for any ERC20 token.',
+    cardButton: 'Integrate your project'
+  },
+  {
+    slug: '/docs',
+    cardTitle: 'Earn fees through passive market making',
+    cardDesc: 'Provide liquidity to earn 0.25% of all spread fees for adding market depth.',
+    cardButton: 'How pooling works'
+  },
+  {
+    slug: '/docs',
+    cardTitle: 'Build decentralized price feeds',
+    cardDesc: 'Perfect time-weighted average prices on chain, customizable to your risk profile.',
+    type: 'New',
+    cardButton: 'Read the SDK'
+  }
+]
 
 module.exports = {
   siteMetadata: {

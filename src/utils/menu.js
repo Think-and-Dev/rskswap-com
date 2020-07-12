@@ -4,24 +4,24 @@ const menu = [
     sublinks: [
       {
         name: 'App',
-        link: 'https://app.uniswap.org/#/',
+        link: 'https://uniswap-rsk.web.app/',
         description: 'Swap tokens and supply liquidity'
       },
-      {
-        name: 'Analytics',
-        link: 'https://uniswap.info/',
-        description: 'Uniswap analytics and historical data'
-      },
-      {
-        name: 'Unisocks',
-        link: 'https://unisocks.exchange/',
-        description: 'Dynamically priced socks'
-      },
-      {
-        name: 'Unipig',
-        link: 'https://unipig.exchange/',
-        description: 'Optimistic rollup demo'
-      }
+      // {
+      //   name: 'Analytics',
+      //   link: 'https://uniswap.info/',
+      //   description: 'Uniswap analytics and historical data'
+      // },
+      // {
+      //   name: 'Unisocks',
+      //   link: 'https://unisocks.exchange/',
+      //   description: 'Dynamically priced socks'
+      // },
+      // {
+      //   name: 'Unipig',
+      //   link: 'https://unipig.exchange/',
+      //   description: 'Optimistic rollup demo'
+      // }
     ]
   },
   {
@@ -32,10 +32,10 @@ const menu = [
         link: '/docs',
         description: 'Comprehensive smart contract and frontend integration docs'
       },
-      { name: 'Github', link: 'https://github.com/Uniswap' },
+      { name: 'Github', link: 'https://github.com/Think-And-Dev' },
       { name: 'Whitepaper', link: '/whitepaper.pdf' },
       { name: 'Audit', link: '/audit.html' },
-      { name: 'Bug Bounty', link: '/bug-bounty' }
+      // { name: 'Bug Bounty', link: '/bug-bounty' }
     ]
   },
   {
@@ -49,7 +49,7 @@ const menu = [
   {
     name: 'Info',
     sublinks: [
-      { name: 'Blog', link: '/blog', description: 'Stay up to date on Uniswap' },
+      //{ name: 'Blog', link: '/blog', description: 'Stay up to date on Uniswap' },
       {
         name: 'FAQ',
         link: '/faq'

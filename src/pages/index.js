@@ -4,7 +4,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../layouts'
 import SEO from '../components/seo'
-import Ticker from '../components/ticker'
+// import Ticker from '../components/ticker'
 import BG from '../components/bg'
 import MiniCard from '../components/minicard'
 import Wizard from '../components/wizard'
@@ -275,7 +275,7 @@ const SummarySection = props => {
       <StyledImgSection>
         <MiniNewInfo to="/blog/launch-uniswap-v2/">
           <NewPill>
-            <LinkTitle>Uniswap</LinkTitle> V2 Launch
+            <LinkTitle>Uniswap RSK</LinkTitle> Launch
           </NewPill>
           Read the announcement ↗
           <StyledUnicornImage fadeIn={false} fluid={props.data.unicornImage.childImageSharp.fluid} />
@@ -283,7 +283,7 @@ const SummarySection = props => {
       </StyledImgSection>
       <StyledImgSection>
         <h1>
-          <b>Uniswap</b> is a fully decentralized protocol for automated liquidity provision on RSK.
+          <b>Uniswap</b> is a fully decentralized protocol for automated liquidity provision and its now on RSK.
         </h1>
 
         <p>
@@ -325,12 +325,12 @@ const ProductsSection = props => {
       </StyledSectionFlex>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
-          href="https://app.uniswap.org"
+          href="https://uniswap-rsk.web.app"
           title={'Uniswap Interface'}
           image={props.data.swap.childImageSharp.fluid}
           desc={'Trade tokens, add liquidity and create new pools.'}
         />
-        <MiniCard
+        {/* <MiniCard
           href="https://uniswap.info"
           title={'Uniswap Info'}
           image={props.data.info.childImageSharp.fluid}
@@ -344,7 +344,7 @@ const ProductsSection = props => {
           desc={'Experimental speculative fashion.'}
           backgroundColor={'#000000'}
           color={'white'}
-        />
+        /> */}
       </StyledSectionFlex>
     </>
   )
@@ -372,9 +372,9 @@ const GoalSection = () => {
       <StyledGoal>
         <h1>Mission</h1>
         <p>
-          <b>Uniswap</b> is transparent, censorship-resistant financial infrastructure for RSK.
+          <b>Uniswap RSK</b> is transparent, censorship-resistant financial infrastructure for RSK.
         </p>
-        <p>Uniswap lowers barriers of entry to financial participation and removes central points of failure.</p>
+        <p>Uniswap Protcol lowers barriers of entry to financial participation and removes central points of failure.</p>
         <p>
           It enables anyone to create new markets, provide liquidity, and build financial applications that could not
           have existed before.

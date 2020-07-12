@@ -29,7 +29,7 @@ Returns <Link to='/docs/v2/smart-contracts/factory/#address'>factory address</Li
 function WETH() external pure returns (address);
 ```
 
-Returns the [WRBTC address](https://think-and-dev.github.io/wrbtc/index.html) on the RSK [mainnet](https://explorer.rsk.co/address/0x967f8799af07df1534d48a95a5c9febe92c53ae0), or  [Testnet](https://explorer.testnet.rsk.co/address/0x09b6ca5e4496238a1f176aea6bb607db96c2286e). The name is missleading as this is a fork from the Ethereum Uniswap contracts.
+Returns the [WRBTC address](https://think-and-dev.github.io/wrbtc/index.html) on the RSK [mainnet](https://explorer.rsk.co/address/0x967f8799af07df1534d48a95a5c9febe92c53ae0), or  [Testnet](https://explorer.testnet.rsk.co/address/0x09b6ca5e4496238a1f176aea6bb607db96c2286e). The name is missleading as this is a fork from the  Uniswap Protocol contracts on Ethereum.
 
 # State-Changing Functions
 
@@ -82,7 +82,7 @@ function addLiquidityETH(
 ) external payable returns (uint amountToken, uint amountETH, uint liquidity);
 ```
 
-Adds liquidity to an ERC-20⇄WRBTC pool with RBTC (yes the name is confusing because this is a fork from the Ethereum contract).
+Adds liquidity to an ERC-20⇄WRBTC pool with RBTC (yes the name is confusing because this is a fork from the Uniswap Protocol contracts on Ethereum).
 
 - To cover all possible scenarios, `msg.sender` should have already given the router an allowance of at least amountTokenDesired on token.
 - Always adds assets at the ideal ratio, according to the price when the transaction is executed.
@@ -416,14 +416,14 @@ function swapETHForExactTokens(uint amountOut, address[] calldata path, address 
   returns (uint[] memory amounts);
 ```
 
-Receive an exact amount of tokens for as little ETH as possible, along the route determined by the path. The first element of path must be [WETH](#weth), the last is the output token and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
+Receive an exact amount of tokens for as little RBTC as possible, along the route determined by the path. The first element of path must be [WETH](#weth), the last is the output token and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
 
-- Leftover ETH, if any, is returned to `msg.sender`.
+- Leftover RBTC, if any, is returned to `msg.sender`.
 
 | Name                      | Type                 |                                                                                                                                      |
 | :------------------------ | :------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | amountOut                 | `uint`               | The amount of tokens to receive.                                                                                                     |
-| `msg.value` (amountInMax) | `uint`               | The maximum amount of ETH that can be required before the transaction reverts.                                                       |
+| `msg.value` (amountInMax) | `uint`               | The maximum amount of RBTC that can be required before the transaction reverts.                                                       |
 | path                      | `address[] calldata` | An array of token addresses. `path.length` must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity. |
 | to                        | `address`            | Recipient of the output tokens.                                                                                                      |
 | deadline                  | `uint`               | Unix timestamp after which the transaction will revert.                                                                              |

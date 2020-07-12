@@ -5,7 +5,7 @@ tags: protocol-overview, documentation
 
 ### Automated market maker
 
-An automated market maker is a smart contract on Ethereum that hold on-chain liquidity reserves. Users can trade agains these reserves at prices set by an automated market making formula.
+An automated market maker is a smart contract on RSK that hold on-chain liquidity reserves. Users can trade agains these reserves at prices set by an automated market making formula.
 
 ### Constant product formula
 
@@ -14,7 +14,7 @@ See [x\*y=k](#x--y--k).
 
 ### ERC20
 
-ERC20 tokens are fungibile tokens on Ethereum. Uniswap supports all standard ERC20 implementations.
+ERC20 tokens are fungibile tokens on RSK. Uniswap supports all standard ERC20 implementations.
 
 ### Factory
 

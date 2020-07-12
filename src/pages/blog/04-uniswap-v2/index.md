@@ -1,53 +1,43 @@
 ---
-title: 'Uniswap V2 Overview'
-date: '2020-03-23'
-author: 'Hayden Adams'
+title: 'Uniswap RSK V2 Overview'
+date: '2020-06-10'
+author: 'Pedro Prete'
 featuredImage: ./featured.jpg
-previewText: 'All about Uniswap V2. Price oracles, optimistic swaps and much much more. Launching April 2020.'
+previewText: 'All about Uniswap V2 on RSK. Price oracles, optimistic swaps and much much more. Launching July 2020.'
 ---
 
-**Uniswap V1** was the proof-of-concept for a new type of decentralized marketplace.
-
-As a venue for pooled, automated liquidity provision on Ethereum, the Uniswap protocol (Uniswap) functions without upkeep, providing an unstoppable platform for ERC20 token conversion. **Uniswap V1 will continue to work for as long as Ethereum exists**, and so far, it has worked very nicely for a wide variety of use cases.
-
-![Uniswap V1 Liquidity Growth](v1_liquidity.png)
-
-However, pooled automated liquidity remains nascent technology, and **we have only just begun to realize its potential**. For this reason, last year [we raised a seed round](https://finance.yahoo.com/news/paradigm-backs-decentralized-exchange-protocol-184824051.html) and formed a dedicated team to research and develop Uniswap alongside the broader Ethereum community.
-
-**Uniswap V2** is our second iteration of Uniswap and includes many new features and improvements. This article will serve as a high-level overview of these changes including:
+**Uniswap RSK V2** is a fork of the famous [Uniswap Protocol](https://uniswap.org/) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
 
 - [ERC20 / ERC20 Pairs](#erc20--erc20-pairs)
 - [Price Oracles](#price-oracles)
 - [Flash Swaps](#flash-swaps)
 - [Core/Helper Architecture](#corehelper-architecture)
-- [Technical Improvements](#technical-improvements)
+<!-- - [Technical Improvements](#technical-improvements) -->
 - [Path to Sustainability](#path-to-sustainability)
-- [Testnet and Launch Details](#testnet-and-launch-details)
+<!-- - [Testnet and Launch Details](#testnet-and-launch-details) -->
 
 For full details check out the:
 
-- [Core smart contracts](https://github.com/Uniswap/uniswap-v2-core/)
-- [Periphery smart contracts](https://github.com/Uniswap/uniswap-v2-periphery)
+- [Core smart contracts](https://github.com/Think-and-Dev/uniswap-v2-core/)
+- [Periphery smart contracts](https://github.com/Think-and-Dev/uniswap-v2-periphery)
 - <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>Uniswap V2 Technical Whitepaper</a>
-- <Link to='/docs/v2/'>Uniswap V2 Documentation</Link> (in progress!)
+- <Link to='/docs/v2/'>Uniswap RSK V2 Documentation</Link> (in progress!)
 
 ## ERC20 / ERC20 Pairs
 
-In Uniswap V2, **any ERC20 token can be pooled directly with any other ERC20 token**. Wrapped Ether (WETH) is used instead of native ETH in the core contracts, although end users can still use ETH through helper contracts.
-
-In Uniswap V1, all liquidity pools are between ETH and a single ERC20 token. Having a constant numeraire provides a nice UX advantage — users can swap any ERC20 for any other ERC20 by routing through ETH. Since ETH is the most liquid Ethereum-based asset, and does not introduce any new platform risk, it was the best choice for Uniswap V1.
+In Uniswap V2, **any ERC20 token can be pooled directly with any other ERC20 token**. Wrapped RBTC (WRBTC) is used instead of native RBTC in the core contracts, although end users can still use RBTC through helper contracts.
 
 ![](v1_DAI_USDC_swap.png)
 
-However, the introduction of ERC20 token/ERC20 token pools in Uniswap V2 can be **useful for liquidity providers, who can maintain more diverse ERC20 token denominated positions**, without mandatory exposure to ETH. One example would be a DAI/USDC pair, which should theoretically have little volatility for liquidity providers, but is useful for trading.
+The introduction of ERC20 token/ERC20 token pools in Uniswap V2 can be **useful for liquidity providers, who can maintain more diverse ERC20 token denominated positions**, without mandatory exposure to RBTC. One example would be a DAI/USDC pair, which should theoretically have little volatility for liquidity providers, but is useful for trading.
 
-Having direct ERC20/ERC20 pairs can also improve prices because routing through ETH for a swap between two other assets (say, DAI/USDC) involves paying fees and slippage on two separate pairs instead of one.
+Having direct ERC20/ERC20 pairs can also improve prices because routing through RBTC for a swap between two other assets (say, DAI/USDC) involves paying fees and slippage on two separate pairs instead of one.
 
 If two ERC20 tokens are not paired directly, and do not have a common pair between them, they can still be swapped as long as a path between them exists. Router contracts can be used to optimize between direct and multi-step swaps.
 
 ![](v2_swaps.png)
 
-We still anticipate ETH pairs being very popular, but expect to see growth in other types of pairs over time.
+We still anticipate RBTC pairs being very popular, but expect to see growth in other types of pairs over time.
 
 ## Price Oracles
 
@@ -81,7 +71,7 @@ A few notes:
 
 There are some nuances that are good to be aware of when using Uniswap V2 as an oracle, especially where manipulation resistance is concerned. The <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> elaborates on some of them. Additional oracle-focused developer guides and documentation will be released soon.
 
-In the meantime, check out our [example implementation](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Uniswap V2!
+In the meantime, check out our [example implementation](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Uniswap V2!
 
 ## Flash Swaps
 
@@ -95,52 +85,52 @@ Liquidity provider fees are enforced by subtracting 0.3% from all input amounts,
 
 ![](v2_flash_swaps.png)
 
-It is often the case that a series of transactions on Ethereum has a high upfront cost but ultimately a low net cost or is even net profitable by the end of the series. **Flash swaps** are incredibly useful because they **remove upfront capital requirements and unnecessary constraints on order-of-operations** for multi-step transactions that use Uniswap.
+It is often the case that a series of transactions on RSK has a high upfront cost but ultimately a low net cost or is even net profitable by the end of the series. **Flash swaps** are incredibly useful because they **remove upfront capital requirements and unnecessary constraints on order-of-operations** for multi-step transactions that use Uniswap.
 
-One example is **arbitrage with no upfront capital**. Imagine a scenario where you can sell 200 DAI for 1 ETH on Uniswap and then sell that 1 ETH on Oasis for 220 DAI at a 20 DAI profit. But, unfortunately, you don't have any DAI in your wallet.
+One example is **arbitrage with no upfront capital**. Imagine a scenario where you can sell 200 DOC for 1 RBTC on Uniswap and then sell that 1 RBTC on Money on Chain for 220 DOC at a 20 DOC profit. But, unfortunately, you don't have any DOC in your wallet.
 
 ![](no_capital.gif)
 
-With flash swaps you could synchronously withdraw 1 ETH from Uniswap, sell it on Oasis for 220 DAI and then pay for the ETH on Uniswap with 200 of the DAI you just purchased.
+With flash swaps you could synchronously withdraw 1 RBTC from Uniswap, sell it on Oasis for 220 DOC and then pay for the RBTC on Uniswap with 200 of the DOC you just purchased.
 
 Another example use case is **improving the efficiency of margin trading protocols** that borrow from lending protocols and use Uniswap for ERC20 token conversion. This is currently done with the following process:
 
-1. add user ETH to Maker,
-2. borrow DAI from Maker
-3. swap DAI for ETH on Uniswap
+1. add user RBTC to Money on Chain,
+2. borrow DOC from Money on Chain
+3. swap DOC for RBTC on Uniswap
 4. repeat steps 1–3 **multiple times** until you reached desired leverage
 
 With flash swaps this process is simplified to:
 
-1. withdraw all ETH you want from Uniswap
-2. add user and Uniswap ETH to Maker
-3. borrow all DAI you need from Maker
-4. return DAI to the Uniswap protocol
+1. withdraw all RBTC you want from Uniswap
+2. add user and Uniswap RBTC to Money on Chain
+3. borrow all DOC you need from Money on Chain
+4. return DOC to the Uniswap protocol
 
-If the Uniswap pool does not receive enough DAI to cover the ETH withdrawn, then the entire transaction will revert; thus, all ERC20 tokens are returned or paid for at the end of the transaction.
+If the Uniswap pool does not receive enough DAI to cover the RBTC withdrawn, then the entire transaction will revert; thus, all ERC20 tokens are returned or paid for at the end of the transaction.
 
 ## Core/Helper Architecture
 
-[Uniswap V2 Core](https://github.com/Uniswap/uniswap-v2-core) are the essential Uniswap V2 smart contracts, consisting of:
+[Uniswap V2 Core](https://github.com/Think-and-Dev/uniswap-v2-core) are the essential Uniswap V2 smart contracts, consisting of:
 
-- [UniswapV2Pair.sol](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol), which implements core swapping and liquidity provision functionality
-- [UniswapV2Factory.sol](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol), which deploys [UniswapV2Pair.sol](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) contracts for any ERC20 token/ERC20 token pair
+- [UniswapV2Pair.sol](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol), which implements core swapping and liquidity provision functionality
+- [UniswapV2Factory.sol](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol), which deploys [UniswapV2Pair.sol](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) contracts for any ERC20 token/ERC20 token pair
 
 **Core is minimalist in design, removing all logic that is not strictly necessary to secure liquidity stored in its pools.** Logic related to trader security or ease-of-use must be implemented in external helper contracts. Since external helpers can be improved and replaced without needing to migrate liquidity, **this improves on the flexibility and modularity of Uniswap.**
 
-[Uniswap V2 Periphery](https://github.com/Uniswap/uniswap-v2-periphery) (periphery) is an initial set of helpers, including:
+[Uniswap V2 Periphery](https://github.com/Think-and-Dev/uniswap-v2-periphery) (periphery) is an initial set of helpers, including:
 
-- [A router contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) that performs the safety checks needed for safely swapping, adding, and removing liquidity.
-- [A migrator contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Migrator.sol) that can remove liquidity from Uniswap V1 and deposit it into Uniswap V2 in a single transaction.
-- [A library contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol) that can be used in the creation of other helper contracts.
-- [An example oracle contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) that creates a simple TWAP from Uniswap V2 cumulative prices.
-- [An example flash swap contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol) that withdraws ERC20 tokens, executes arbitrary code, and then pays for them.
+- [A router contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) that performs the safety checks needed for safely swapping, adding, and removing liquidity.
+- [A migrator contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/UniswapV2Migrator.sol) that can remove liquidity from Uniswap V1 and deposit it into Uniswap V2 in a single transaction.
+- [A library contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol) that can be used in the creation of other helper contracts.
+- [An example oracle contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) that creates a simple TWAP from Uniswap V2 cumulative prices.
+- [An example flash swap contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol) that withdraws ERC20 tokens, executes arbitrary code, and then pays for them.
 
 _Periphery contracts described as "Example" are for illustrative purposes only and should not be used in actual transactions._
 
 While this is a huge improvement, there are some new smart contract patterns introduced which developers building on top of Uniswap should be aware of.
 
-- Core uses WETH instead of ETH. Routers can convert between ETH and WETH allowing users to use ETH directly
+- Core uses WRBTC instead of RBTC. Routers can convert between RBTC and WRBTC allowing users to use RBTC directly
 - Core stores ERC20 token balances internally instead of relying on the balances stored in the ERC20 token contract
 - Core no longer calls **transferFrom** on **msg.sender**. Instead ERC20 tokens should be sent to core directly by a router before calling the **swap** , **mint** or **burn** functions.
 - Core will determine the number of ERC20 tokens sent to it based on the difference between its current and stored balances.
@@ -163,7 +153,7 @@ Uniswap V2 contains many other significant changes and improvements including th
 
 ## Path to Sustainability
 
-Decentralization is in many ways about increasing participation and removing central points of failure. Uniswap V1 is already highlydecentralized, trustless, and censorship resistant. But for it to achieve its full potential as infrastructure in a fair and open financial system — **it must continue to grow and improve**.
+Decentralization is in many ways about increasing participation and removing central points of failure. But for it to achieve its full potential as infrastructure in a fair and open financial system — **it must continue to grow and improve**.
 
 To open a path to self-sustainability, the code for Uniswap V2 includes a small protocol charge mechanism. At launch, the protocol charge will default to 0, and the liquidity provider fee will be 0.30%. If the protocol charge is switched on, it will become 0.05% and the liquidity provider fee will be 0.25%.
 
@@ -198,11 +188,11 @@ While the core smart contracts are finished, additional work is still in progres
 
 Pending a successful formal verification, we are optimistic that Uniswap V2 can be deployed in Q2 of this year. However, please keep in mind that this is a target and not an announced release date.
 
-In the meantime, developers can begin playing with Uniswap V2 today! The factory and an initial router smart contract have already been deployed to the Ropsten, Rinkeby, Kovan, and Görli testnets.
+In the meantime, developers can begin playing with Uniswap RSK V2 today! The factory and an initial router smart contract have already been deployed Mainnet and Testnet.
 
-**<Link to='/docs/v2/smart-contracts/factory/#address'>Uniswap V2 Factory (Testnet)</Link>**
+**<Link to='/docs/v2/smart-contracts/factory/#address'>Uniswap V2 Factory</Link>**
 
-**<Link to='/docs/v2/smart-contracts/router/#address'>Uniswap V2 Router 01 (Testnet)</Link>**
+**<Link to='/docs/v2/smart-contracts/router/#address'>Uniswap V2 Router 02</Link>**
 
 **We want to hear from you!**
 
@@ -210,4 +200,4 @@ We will be releasing additional updates, information, and documentation over the
 
 - [Join the Uniswap community discord](https://discord.gg/XErMcTq)
 - [Follow Uniswap on Twitter](https://twitter.com/UniswapProtocol)
-- Subscribe to the <Link to='/blog/'>Uniswap blog</Link>
+<!-- - Subscribe to the <Link to='/blog/'>Uniswap blog</Link> -->

@@ -3,9 +3,9 @@ title: Smart Contract Quick start
 tags: smart contract integration, documentation, quick start
 ---
 
-Developing smart contracts for Ethereum involves a bevy of off-chain tools used for producing and testing bytecode 
-that runs on the [Ethereum Virtual Machine (EVM)](https://eth.wiki/en/concepts/evm/ethereum-virtual-machine-(evm)-awesome-list).
-Some tools also include workflows for deploying this bytecode to the Ethereum network and testnets.
+Developing smart contracts for RSK involves a bevy of off-chain tools used for producing and testing bytecode 
+that runs on the [RSK Virtual Machine (RVM), a fork of Ethereum Virtual Machine (EVM)](https://eth.wiki/en/concepts/evm/ethereum-virtual-machine-(evm)-awesome-list).
+Some tools also include workflows for deploying this bytecode to the RSK network and testnets.
 There are many options for these tools. This guide walks you through writing and testing a simple smart contract that
 interacts with the Uniswap Protocol using one specific set of tools (`truffle` + `npm` + `mocha`).
 

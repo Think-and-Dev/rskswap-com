@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Search from './algoliaSearch'
 import Uni from '../images/uni.inline.svg'
+import UniDark from '../images/uni.inlinedark.svg'
 import { Sun, Moon, Home } from 'react-feather'
 
 import MenuIcon from '../images/menu.inline.svg'
@@ -12,8 +13,8 @@ import CloseIcon from '../images/x.inline.svg'
 import Discord from '../images/discord.inline.svg'
 import Github from '../images/githubicon.inline.svg'
 
-import SidebarV2 from './sidebarV2'
-import SidebarV1 from './sidebarV1'
+// import SidebarV2 from './sidebarV2'
+// import SidebarV1 from './sidebarV1'
 import { useMediaQuery } from '@react-hook/media-query'
 
 import { useDarkMode } from '../contexts/Application'
@@ -112,9 +113,19 @@ const StyledHomeLink = styled(Link)`
 `
 
 const StyledUni = styled(Uni)`
-  path {
-    fill: ${({ theme }) => theme.colors.link};
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.35rem;
+  margin-top: -4px;
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+  :hover {
+    transform: rotate(-10deg);
   }
+`
+
+const StyledUniDark = styled(UniDark)`
   margin: 0;
   width: 20px;
   height: 20px;
@@ -175,32 +186,32 @@ const MenuToggle = styled.button`
   }
 `
 
-const VersionLabel = styled.span`
-  padding: 0.15rem 0.45rem;
-  border-radius: 12px;
-  background: ${({ theme, toggled }) => (toggled ? theme.colors.link : 'none')};
-  color: ${({ theme, toggled }) => (toggled ? theme.invertedTextColor : theme.colors.link)};
+// const VersionLabel = styled.span`
+//   padding: 0.15rem 0.45rem;
+//   border-radius: 12px;
+//   background: ${({ theme, toggled }) => (toggled ? theme.colors.link : 'none')};
+//   color: ${({ theme, toggled }) => (toggled ? theme.invertedTextColor : theme.colors.link)};
 
-  font-size: 0.75rem;
-  font-weight: 400;
-`
+//   font-size: 0.75rem;
+//   font-weight: 400;
+// `
 
-const VersionToggle = styled(Link)`
-  border-radius: 14px;
-  margin-right: 1rem;
-  color: ${({ theme }) => theme.invertedTextColor};
-  border: 1px solid ${({ theme }) => theme.colors.grey2};
-  display: flex;
-  width: fit-content;
-  cursor: pointer;
-`
+// const VersionToggle = styled(Link)`
+//   border-radius: 14px;
+//   margin-right: 1rem;
+//   color: ${({ theme }) => theme.invertedTextColor};
+//   border: 1px solid ${({ theme }) => theme.colors.grey2};
+//   display: flex;
+//   width: fit-content;
+//   cursor: pointer;
+// `
 
 const Header = props => {
   const node = useRef()
   const [darkMode, toggleDarkMode] = useDarkMode()
 
   // get global version and check if v2 or not
-  const v2Toggle = props.path.slice(0, 8) === '/docs/v2'
+  // const v2Toggle = props.path.slice(0, 8) === '/docs/v2'
 
   const button = useRef()
   const [isMenuOpen, updateIsMenuOpen] = useState(false)
@@ -248,22 +259,22 @@ const Header = props => {
         </MenuToggle>
         <StyledNav ref={node} open={isMenuOpen}>
           {!isMobile && <Search {...props} />}
-          {isMobile &&
+          {/* {isMobile &&
             (v2Toggle ? <SidebarV2 parent={'/docs/'} {...props} /> : <SidebarV1 parent={'/docs/'} {...props} />)}
           <VersionToggle to={v2Toggle ? '/docs/v1/' : '/docs/v2/'}>
             <VersionLabel toggled={!v2Toggle}>V1</VersionLabel>
             <VersionLabel toggled={v2Toggle}>V2</VersionLabel>
-          </VersionToggle>
+          </VersionToggle> */}
           <StyledButton type="button" onClick={toggleDarkMode}>
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </StyledButton>
           <StyledButton fill>
-            <a href="https://discord.gg/XErMcTq">
+            <a href="https://discord.gg/XErMcTq" target="_blank" rel="noreferrer">
               <Discord />
             </a>
           </StyledButton>
           <StyledButton fill>
-            <a href="https://github.com/Uniswap">
+            <a href="https://github.com/Think-and-Dev" target="_blank" rel="noreferrer">
               <Github width={20} />
             </a>
           </StyledButton>

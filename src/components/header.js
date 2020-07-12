@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import Menu from './menu'
 
 import Uni from '../images/uni.inline.svg'
+import UniDark from '../images/uni.inlinedark.svg'
 import Wordmark from '../images/wordmark.inline.svg'
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
@@ -135,9 +136,19 @@ const MenuToggle = styled.button`
 `
 
 const StyledUni = styled(Uni)`
-  path {
-    fill: ${({ theme }) => theme.colors.link};
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 0.35rem;
+  margin-top: -4px;
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+  :hover {
+    transform: rotate(-10deg);
   }
+`
+
+const StyledUniDark = styled(UniDark)`
   margin: 0;
   width: 36px;
   height: 36px;
@@ -234,7 +245,6 @@ const Header = props => {
           }}
         >
           <StyledUni />
-
           <StyledWordmark />
         </StyledHomeLink>
         {props.path && props.path !== '/' && props.path !== '' && (

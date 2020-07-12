@@ -3,7 +3,7 @@ title: Flash Swaps
 tags: smart contract integration, developer-guides, documentation
 ---
 
-Flash swaps are an integral feature of Uniswap V2. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because Ethereum transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
+Flash swaps are an integral feature of Uniswap V2. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because RSK transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
 
 To see how this all works, let's start by examining the interface of the `swap` function:
 
@@ -11,7 +11,7 @@ To see how this all works, let's start by examining the interface of the `swap` 
 function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data);
 ```
 
-For the sake of example, let's assume that we're dealing with a DAI/WETH pair, where DAI is `token0` and WETH is `token1`. `amount0Out` and `amount1Out` specify the amount of DAI and WETH that the `msg.sender` wants the pair to send to the `to` address (one of these amounts may be 0). At this point you may be wondering how the contract _receives_ tokens. For a typical (non-flash) swap, it's actually the responsibility of `msg.sender` to ensure that enough WETH or DAI has _already been sent_ to the pair before `swap` is called (in the context of trading, this is all handled neatly by a router contract). But when executing a flash swap, _tokens do not need to be sent to the contract before calling `swap`_. Instead, they must be sent from within a _callback function_ that the pair triggers on the `to` address.
+For the sake of example, let's assume that we're dealing with a DOC/WRBTC pair, where DOC is `token0` and WRBTC is `token1`. `amount0Out` and `amount1Out` specify the amount of DOC and WRBTC that the `msg.sender` wants the pair to send to the `to` address (one of these amounts may be 0). At this point you may be wondering how the contract _receives_ tokens. For a typical (non-flash) swap, it's actually the responsibility of `msg.sender` to ensure that enough WRBTC or DOC has _already been sent_ to the pair before `swap` is called (in the context of trading, this is all handled neatly by a router contract). But when executing a flash swap, _tokens do not need to be sent to the contract before calling `swap`_. Instead, they must be sent from within a _callback function_ that the pair triggers on the `to` address.
 
 # Triggering a Flash Swap
 
@@ -46,21 +46,21 @@ At the end of `uniswapV2Call`, contracts must return enough tokens to the pair t
 
 ## Multi-Token
 
-In the case where the token withdrawn is _not_ the token returned (i.e. DAI was requested in the flash swap, and WETH was returned, or vice versa), the fee simplifies to the simple swap case. This means that the standard `getAmountIn` pricing function should be used to calculate e.g. the amount of WETH that must be returned in exchange for the amount of DAI that was requested out.
+In the case where the token withdrawn is _not_ the token returned (i.e. DOC was requested in the flash swap, and WRBTC was returned, or vice versa), the fee simplifies to the simple swap case. This means that the standard `getAmountIn` pricing function should be used to calculate e.g. the amount of WRBTC that must be returned in exchange for the amount of DOC that was requested out.
 
 This fee calculation is an excellent reason to use Uniswap flash swaps - if you pay for your flash swap in the corresponding pair token, it's free!
 
 ## Single-Token
 
-In the case where the token withdrawn is the _same_ as the token returned (i.e. DAI was requested in the flash swap, used, then returned, or vice versa with WETH), the following condition must be satisfied:
+In the case where the token withdrawn is the _same_ as the token returned (i.e. DOC was requested in the flash swap, used, then returned, or vice versa with WRBTC), the following condition must be satisfied:
 
-`DAIReservePre - DAIWithdrawn + (DAIReturned * .997) >= DAIReservePre`
+`DOCReservePre - DOCWithdrawn + (DOCReturned * .997) >= DOCReservePre`
 
 It may be more intuitive to rewrite this formula in terms of a "fee" levied on the _withdrawn_ amount (despite the fact that Uniswap always levies fees on input amounts, in this case the _returned_ amount, here we can simplify to an effective fee on the _withdrawn_ amount). If we rearrange, the formula looks like:
 
-`(DAIReturned * .997) - DAIWithdrawn >= 0`
+`(DOCReturned * .997) - DOCWithdrawn >= 0`
 
-`DAIReturned >= DAIWithdrawn / .997`
+`DOCReturned >= DOCWithdrawn / .997`
 
 So, the effective fee on the withdrawn amount is `.003 / .997 ≈ 0.3009027%`.
 
@@ -70,9 +70,9 @@ For further exploration of flash swaps, see the <a href='/whitepaper.pdf' target
 
 # Example
 
-A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
+A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
 
-<Github href="https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
+<Github href="https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
 
 # Interface
 

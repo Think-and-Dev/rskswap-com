@@ -6,7 +6,7 @@ title: FAQ
 
 # What is Uniswap?
 
-Uniswap is a protocol for exchanging ERC-20 tokens on Ethereum. It eliminates trusted intermediaries and unnecessary forms of rent extraction, allowing for fast, efficient trading. Where it makes tradeoffs decentralization, censorship resistance, and security are prioritized. Uniswap is open-source software licensed under GPL.
+Uniswap is a protocol for exchanging ERC-20 tokens on RSK. It eliminates trusted intermediaries and unnecessary forms of rent extraction, allowing for fast, efficient trading. Where it makes tradeoffs decentralization, censorship resistance, and security are prioritized. Uniswap is open-source software licensed under GPL.
 
 If you want to understand more about Uniswap check out the [docs](/docs/v2/).
 
@@ -36,23 +36,23 @@ If you speed up an approve, Uniswap can't detect the new transaction. Open your 
 
 # How do I find X token?
 
-If you can't find a token in the default list, find the token address using etherscan and paste that address into the search field.
+If you can't find a token in the default list, find the token address using (RSK explorer)[https://explorer.rsk.co/] and paste that address into the search field.
 
 # How do I add a logo for a token?
 
-Uniswap pulls from the trustwallet asset repository on github. [https://github.com/trustwallet/assets](https://github.com/trustwallet/assets) Add your token icon to that repo and it will appear on the frontend and on info.
+Uniswap pulls from the RSK metadata repository on github. [https://github.com/rsksmart/rsk-contract-metadata](https://github.com/rsksmart/rsk-contract-metadata) Add your token icon to that repo and it will appear on the frontend and on info.
 
 # How can I add a token to Uniswap?
 
-Uniswap is compatible with any ERC-20 token in the ethereum ecosystem. If you want your project to be searchable in their interface you should seek to be added to a reputable token list or share a link to your token using query parameters. Once loaded via link, the token will be added to their interface.
+Uniswap is compatible with any ERC-20 token in the RSK ecosystem. If you want your project to be searchable in their interface you should seek to be added to a reputable token list or share a link to your token using query parameters. Once loaded via link, the token will be added to their interface.
 
-Another option is to open a request using github [issues](https://github.com/Uniswap/uniswap-frontend/issues/new?assignees=&labels=token+request&template=token-request.md&title=).
+Another option is to open a request using github [issues](https://github.com/Think-and-Dev/uniswap-frontend-rsk/issues/new?assignees=&labels=token+request&template=token-request.md&title=).
 
 The uniswap team makes no guarantees or provides any timeline. Nor will the team ever charge or request funds. We've added many UX features to make it easier to share a new token with communities like local storage support and custom linking. Please make use of them.
 
 # Why does my transaction cost X?
 
-Ethereum requires gas to execute each transaction. You can also check ETH gas station for the current prices required to complete transactions. Creating a Uniswap pool is a slightly costlier transaction because you are executing a more complex smart contract. Read more about how gas works in ethereum.
+RSK requires gas to execute each transaction. You can also check RBTC gas station for the current prices required to complete transactions. Creating a Uniswap pool is a slightly costlier transaction because you are executing a more complex smart contract. Read more about how gas works in RSK.
 
 # How can I see my liquidity provider fees?
 
