@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import Menu from './menu'
 
 import Uni from '../images/uni.inline.svg'
-import UniDark from '../images/uni.inlinedark.svg'
+import UniDark from '../images/unidark.inline.svg'
 import Wordmark from '../images/wordmark.inline.svg'
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
@@ -244,7 +244,7 @@ const Header = props => {
             textDecoration: `none`
           }}
         >
-          <StyledUni />
+          {darkMode ? <StyledUniDark /> : <StyledUni />}
           <StyledWordmark />
         </StyledHomeLink>
         {props.path && props.path !== '/' && props.path !== '' && (

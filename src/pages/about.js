@@ -172,14 +172,14 @@ const About = props => {
             Community
           </StyledHeadingLink>
 
-          <StyledHeadingLink
+          {/* <StyledHeadingLink
             onClick={() => {
               scrollTo('#brand')
               window.history.pushState({}, '', '#brand')
             }}
           >
             Brand Assets
-          </StyledHeadingLink>
+          </StyledHeadingLink> */}
         </StyledSidebar>
         <span>
           <StyledSectionFlex id="about" style={{ flexDirection: 'column' }}>

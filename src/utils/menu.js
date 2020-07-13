@@ -63,7 +63,7 @@ const menu = [
         name: 'Jobs',
         link: '/about#jobs'
       },
-      { name: 'Brand Assets', link: '/about#brand-assets' }
+      //{ name: 'Brand Assets', link: '/about#brand-assets' }
     ]
   }
 ]

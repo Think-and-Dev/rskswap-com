@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Search from './algoliaSearch'
 import Uni from '../images/uni.inline.svg'
-import UniDark from '../images/uni.inlinedark.svg'
+import UniDark from '../images/unidark.inline.svg'
 import { Sun, Moon, Home } from 'react-feather'
 
 import MenuIcon from '../images/menu.inline.svg'
@@ -228,7 +228,7 @@ const Header = props => {
               textDecoration: `none`
             }}
           >
-            <StyledUni />
+            {darkMode ? <StyledUniDark /> : <StyledUni />}
           </StyledHomeLink>
           {props.path && props.path !== '/' && props.path !== '' && (
             <>

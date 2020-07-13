@@ -34,7 +34,7 @@ const menu = [
     name: 'Info',
     sublinks: [
       { name: 'About', link: '/about' },
-      { name: 'Brand Assets', link: '/about#brand-assets' }
+      //{ name: 'Brand Assets', link: '/about#brand-assets' }
     ]
   }
 ]
@@ -55,7 +55,7 @@ const cards = [
   {
     slug: '/docs',
     cardTitle: 'Earn fees through passive market making',
-    cardDesc: 'Provide liquidity to earn 0.25% of all spread fees for adding market depth.',
+    cardDesc: 'Provide liquidity to earn 0.3% of all spread fees for adding market depth.',
     cardButton: 'How pooling works'
   },
   {
@@ -69,12 +69,12 @@ const cards = [
 
 module.exports = {
   siteMetadata: {
-    title: `Uniswap Rsk`,
+    title: `Uniswap RSK`,
     description: `Automated liquidity protocol on RSK`,
     author: `@ThinkAndDev`,
     menulinks: menu,
     cardlinks: cards,
-    siteUrl: `https://uniswap-rsk.web.app/`,
+    siteUrl: `https://uniswap-org-rsk.web.app`,
     repository: `https://github.com/Think-and-Dev/uniswap-org-rsk`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `master`
   },
