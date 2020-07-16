@@ -7,7 +7,7 @@ The Uniswap SDK exists to help developers build on top of Uniswap. It's designed
 
 # Installation
 
-The easiest way to consume the SDK is via NPM. To install it in your project, simply run `yarn add @uniswap/sdk` (or `npm install @uniswap/sdk`).
+The easiest way to consume the SDK is via NPM. To install it in your project, simply run `yarn add @thinkanddev/uniswap-sdk-rsk` (or `npm install @thinkanddev/uniswap-sdk-rsk`).
 
 # Usage
 
@@ -16,15 +16,15 @@ To run code from the SDK in your application, use an `import` or `require` state
 ## ES6 (import)
 
 ```typescript
-import { ChainId } from '@uniswap/sdk'
-console.log(`The chainId of mainnet is ${ChainId.MAINNET}.`)
+import { ChainId } from '@thinkanddev/uniswap-sdk-rsk'
+console.log(`The chainId of mainnet is ${ChainId.RSK_MAINNET}.`)
 ```
 
 ## CommonJS (require)
 
 ```typescript
-const UNISWAP = require('@uniswap/sdk')
-console.log(`The chainId of mainnet is ${UNISWAP.ChainId.MAINNET}.`)
+const UNISWAP = require('@thinkanddev/uniswap-sdk-rsk')
+console.log(`The chainId of mainnet is ${UNISWAP.ChainId.RSK_MAINNET}.`)
 ```
 
 # Reference

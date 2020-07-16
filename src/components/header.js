@@ -8,7 +8,7 @@ import Menu from './menu'
 
 import Uni from '../images/uni.inline.svg'
 import UniDark from '../images/unidark.inline.svg'
-import Wordmark from '../images/wordmark.inline.svg'
+import Wordmark from '../images/rskfont1.inline.svg' // '../images/wordmark.inline.svg'
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
 
@@ -168,7 +168,7 @@ const StyledWordmark = styled(Wordmark)`
   margin: 0;
   margin-top: 6px;
   /* height: 23px; */
-  width: 110px;
+  width: 165px;
 `
 
 const StyledCloseIcon = styled(CloseIcon)`
@@ -267,7 +267,7 @@ const Header = props => {
         <StyledButton type="button" onClick={toggleDarkMode}>
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </StyledButton>
-        {props.path !== undefined && <StyledTradeLink href="https://uniswap-rsk.web.app/">Launch App</StyledTradeLink>}
+        {props.path !== undefined && <StyledTradeLink href="https://app.uniswap-rsk.com/">Launch App</StyledTradeLink>}
       </StyledNav>
     </StyledHeader>
   )

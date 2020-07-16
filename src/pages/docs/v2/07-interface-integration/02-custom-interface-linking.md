@@ -23,7 +23,7 @@ Theme can be set as `light` or `dark`.
 
 ### Example Usage
 
-`https://uniswap-rsk.web.app/swap?theme=dark`
+`https://app.uniswap-rsk.com/swap?theme=dark`
 
 ## Swap Page
 
@@ -50,7 +50,7 @@ Two parameters, exactField and exactAmount can be used to set specific token amo
 
 ### Example Usage
 
-`https://uniswap-rsk.web.app/swap?exactField=input&exactAmount=10&inputCurrency=0x0F5D2fB29fb7d3CFeE444a200298f468908cC942`
+`https://app.uniswap-rsk.com/swap?exactField=input&exactAmount=10&inputCurrency=0x0F5D2fB29fb7d3CFeE444a200298f468908cC942`
 
 ## Pool Page
 
@@ -65,7 +65,7 @@ The Pool page is made up of 2 subroutes: `add`, `remove`.
 
 ### Example Usage
 
-`https://uniswap-rsk.web.app/add/0x6B175474E89094C44Da98b954EedeAC495271d0F-0xdAC17F958D2ee523a2206206994597C13D831ec7`
+`https://app.uniswap-rsk.com/add/0x6B175474E89094C44Da98b954EedeAC495271d0F-0xdAC17F958D2ee523a2206206994597C13D831ec7`
 
 ## Remove Liquidity
 
@@ -78,4 +78,4 @@ Dash seperated.
 
 ### Example Usage
 
-`https://uniswap-rsk.web.app/remove/0x6B175474E89094C44Da98b954EedeAC495271d0F-0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2`
+`https://app.uniswap-rsk.com/remove/0x6B175474E89094C44Da98b954EedeAC495271d0F-0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2`

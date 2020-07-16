@@ -4,7 +4,7 @@ const menu = [
     sublinks: [
       {
         name: 'Interface',
-        link: 'https://uniswap-rsk.web.app/',
+        link: 'https://app.uniswap-rsk.com/',
         description: 'Swap tokens and supply liquidity'
       }
     ]
@@ -41,7 +41,7 @@ const menu = [
 
 const cards = [
   {
-    slug: 'https://uniswap-rsk.web.app/',
+    slug: 'https://app.uniswap-rsk.com/',
     cardTitle: 'Swap any token on RSK',
     cardDesc: 'Use the Uniswap interface or integrate into your project using the SDK.',
     cardButton: 'Swap now'
@@ -74,7 +74,7 @@ module.exports = {
     author: `@ThinkAndDev`,
     menulinks: menu,
     cardlinks: cards,
-    siteUrl: `https://uniswap-org-rsk.web.app`,
+    siteUrl: `https://uniswap-rsk.com`,
     repository: `https://github.com/Think-and-Dev/uniswap-org-rsk`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `master`
   },

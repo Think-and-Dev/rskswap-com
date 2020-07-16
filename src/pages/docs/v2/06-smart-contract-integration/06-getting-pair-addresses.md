@@ -29,7 +29,7 @@ Thanks to some [fancy footwork in the factory](https://github.com/Uniswap/uniswa
 ### Solidity
 
 ```solidity
-address factory = 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f;
+address factory = 0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1;
 address token0 = 0xCAFE000000000000000000000000000000000000; // change me!
 address token1 = 0xF00D000000000000000000000000000000000000; // change me!
 
