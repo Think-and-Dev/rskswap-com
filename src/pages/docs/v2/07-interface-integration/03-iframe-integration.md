@@ -19,7 +19,7 @@ One benefit of an iframe integration is that the your site will automatically ke
 
 # Live Example
 
-<iframe src="https://uniswap-rsk.web.app/swap?exactField=input&exactAmount=10&inputCurrency=0x19F64674D8A5B4E652319F5e239eFd3bc969A1fE"  height="660px"   width="100%"
+<iframe src="https://app.uniswap-rsk.com/swap?exactField=input&exactAmount=10&inputCurrency=0x19F64674D8A5B4E652319F5e239eFd3bc969A1fE"  height="660px"   width="100%"
   style="
     border: 0;
     margin: 0 auto;
@@ -42,7 +42,7 @@ Linking to a RBTC &lt;-&gt; DOC swap page would look something like this. To lin
 
 ```text
 <iframe
-  src="https://uniswap-rsk.web.app/swap?outputCurrency=0xe700691dA7b9851F2F35f8b8182c69c53CcaD9Db"
+  src="https://app.uniswap-rsk.com/swap?outputCurrency=0xe700691dA7b9851F2F35f8b8182c69c53CcaD9Db"
   height="660px"
   width="100%"
   style="

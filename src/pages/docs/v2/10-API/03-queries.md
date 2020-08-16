@@ -17,7 +17,7 @@ All time volume in USD, total liquidity in USD, all time transaction count.
 
 ```
 {
- uniswapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"){
+ uniswapFactory(id: "0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1"){
    totalVolumeUSD
    totalLiquidityUSD
    txCount
@@ -31,7 +31,7 @@ To get a snapshot of past state, use The Graph's block query feature and query a
 
 ```
 {
- uniswapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", block: {number: 10291203}){
+ uniswapFactory(id: "0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1", block: {number: 10291203}){
    totalVolumeUSD
    totalLiquidityUSD
    txCount

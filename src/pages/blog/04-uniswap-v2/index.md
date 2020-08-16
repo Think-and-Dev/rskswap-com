@@ -6,7 +6,7 @@ featuredImage: ./featured.jpg
 previewText: 'All about Uniswap V2 on RSK. Price oracles, optimistic swaps and much much more. Launching July 2020.'
 ---
 
-**Uniswap RSK V2** is a fork of the famous [Uniswap Protocol](https://uniswap.org/) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
+**Uniswap RSK V2** is a fork of the famous [Uniswap Protocol](https://uniswap-rsk.com) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
 
 - [ERC20 / ERC20 Pairs](#erc20--erc20-pairs)
 - [Price Oracles](#price-oracles)
@@ -177,18 +177,14 @@ Uniswap is an ideal candidate for exploring decentralized on-chain cash flows. *
 
 For more details, please refer to the technical <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> or code.
 
-## Testnet and Launch Details
+## Testnet and Mainnet Launch Details
 
-While the core smart contracts are finished, additional work is still in progress.
+While the core smart contracts are finished and deployed on RSK, additional work is still in progress.
 
-- Uniswap V2 smart contracts are undergoing formal verification and security auditing. Bug bounties will be used to encourage additional community security review.
-- The interface, analytics site, API, and developer SDK are being updated to work with Uniswap V2.
+- The interface, analytics site, API, and developer SDK are being updated to work with Uniswap RSK.
 - Documentation, guides, and examples are still being worked on.
-- When everything else is ready, a simple migration UX will be released to improve the experience of moving from Uniswap V1 to Uniswap V2
 
-Pending a successful formal verification, we are optimistic that Uniswap V2 can be deployed in Q2 of this year. However, please keep in mind that this is a target and not an announced release date.
-
-In the meantime, developers can begin playing with Uniswap RSK V2 today! The factory and an initial router smart contract have already been deployed Mainnet and Testnet.
+The factory and an V2 router smart contract have already been deployed in Mainnet and Testnet.
 
 **<Link to='/docs/v2/smart-contracts/factory/#address'>Uniswap V2 Factory</Link>**
 
@@ -197,7 +193,7 @@ In the meantime, developers can begin playing with Uniswap RSK V2 today! The fac
 **We want to hear from you!**
 
 We will be releasing additional updates, information, and documentation over the coming months. We look forward to continued feedback and involvement from the fantastic Uniswap community. To get involved and stay up to date:
-
+<!--
 - [Join the Uniswap community discord](https://discord.gg/XErMcTq)
 - [Follow Uniswap on Twitter](https://twitter.com/UniswapProtocol)
-<!-- - Subscribe to the <Link to='/blog/'>Uniswap blog</Link> -->
+- Subscribe to the <Link to='/blog/'>Uniswap blog</Link> -->

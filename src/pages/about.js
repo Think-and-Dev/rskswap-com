@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import BG from '../components/bg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-import MiniCard from '../components/minicard'
+// import MiniCard from '../components/minicard'
 // import Discord from '../images/discord.inline.svg'
 
 const StyledAbout = styled.div`
@@ -106,31 +106,31 @@ const StyledHeadingLink = styled.a`
 `
 
 const About = props => {
-  const data = useStaticQuery(graphql`
-    {
-      twitter: file(relativePath: { eq: "twitter.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 960) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      discord: file(relativePath: { eq: "discord.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 960) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      reddit: file(relativePath: { eq: "reddit.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 960) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     twitter: file(relativePath: { eq: "twitter.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 960) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //     discord: file(relativePath: { eq: "discord.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 960) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //     reddit: file(relativePath: { eq: "reddit.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 960) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <Layout path={props.location.pathname}>
@@ -154,7 +154,7 @@ const About = props => {
             }}
           >
             Jobs
-          </StyledHeadingLink> */}
+          </StyledHeadingLink> 
           <StyledHeadingLink
             onClick={() => {
               scrollTo('#contact')
@@ -185,13 +185,13 @@ const About = props => {
           <StyledSectionFlex id="about" style={{ flexDirection: 'column' }}>
             <Title style={{ width: '100%' }}>About</Title>
             <p>
-              The Uniswap protocol is developed by a small team in Brooklyn, NY alongside collaborators all across the
+              Uniswap RSK is a fork of the Uniswap protocol, wich is developed by a small team in Brooklyn, NY alongside collaborators all across the
               world.
             </p>
-            <p>Uniswap RSK is a fork of this great project adapted to the RSK network</p>
+            <p>This is not the official Uniswap site, this is an adaptation of that great project to the RSK network</p>
             <p>
               You can read about how Uniswap Protocol got started
-              <Link to="https://uniswap.org/blog/uniswap-history/"> here.</Link>
+              <Link to="/blog/uniswap-history/"> here.</Link>
             </p>
           </StyledSectionFlex>
 
@@ -236,7 +236,7 @@ const About = props => {
               As a small team <strong>we are unable to offer support</strong> in most cases but encourage anyone facing
               issues with their wallet, transaction or Uniswap related question to join our active community discord.
             </p>
-          </StyledSectionFlex> */}
+          </StyledSectionFlex> 
           <StyledSectionFlex id="community" style={{ paddingTop: '2rem' }}>
             <h1 style={{ width: '100%' }}>Community</h1>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -268,12 +268,12 @@ const About = props => {
                 color={'black'}
               />
             </div>
-          </StyledSectionFlex>
+          </StyledSectionFlex>*/}
 
           <StyledSectionFlex id="brand" style={{ flexDirection: 'column' }}>
             <h1 style={{ width: '100%' }}>Brand Assets</h1>
             <p>
-              Download the logo and other brand assets samples <a href="/Uniswap_brand_assets.zip">here</a>.
+              Download the logo and other brand assets samples <a href="/Uniswap_RSK_brand_assets.zip">here</a>.
             </p>
           </StyledSectionFlex>
         </span>

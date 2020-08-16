@@ -9,7 +9,7 @@ tags: smart-contracts, documentation
 
 # Address
 
-`UniswapV2Factory` is deployed at `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f` on the RSK [mainnet](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f) and [Testnet](https://ropsten.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f). It was built from commit [8160750](https://github.com/Think-and-Dev/uniswap-v2-core/commit/816075049f811f1b061bca81d5d040b96f4c07eb).
+`UniswapV2Factory` is deployed at `0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1` on the RSK [mainnet](https://etherscan.io/address/0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1) and [Testnet](https://ropsten.etherscan.io/address/0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1). It was built from commit [8160750](https://github.com/Think-and-Dev/uniswap-v2-core/commit/816075049f811f1b061bca81d5d040b96f4c07eb).
 
 # Events
 
@@ -61,7 +61,7 @@ Returns the total number of pairs created through the factory so far.
 function feeTo() external view returns (address);
 ```
 
-See <Link to='/docs/v2/smart-contracts/architecture/#protocol-charge-calculation'>Protocol Charge Calculation</Link>.
+See <Link to='/docs/v2/advanced-topics/fees/#protocol-charge-calculation'>Protocol Charge Calculation</Link>.
 
 ## feeToSetter
 
