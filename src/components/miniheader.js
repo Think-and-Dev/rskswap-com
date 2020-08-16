@@ -10,7 +10,7 @@ import { Sun, Moon, Home } from 'react-feather'
 
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
-import Discord from '../images/discord.inline.svg'
+//import Discord from '../images/discord.inline.svg'
 import Github from '../images/githubicon.inline.svg'
 
 // import SidebarV2 from './sidebarV2'
@@ -268,11 +268,11 @@ const Header = props => {
           <StyledButton type="button" onClick={toggleDarkMode}>
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </StyledButton>
-          <StyledButton fill>
+          {/* <StyledButton fill>
             <a href="https://discord.gg/XErMcTq" target="_blank" rel="noreferrer">
               <Discord />
             </a>
-          </StyledButton>
+          </StyledButton> */}
           <StyledButton fill>
             <a href="https://github.com/Think-and-Dev" target="_blank" rel="noreferrer">
               <Github width={20} />

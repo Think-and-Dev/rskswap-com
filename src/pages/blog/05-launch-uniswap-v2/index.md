@@ -8,7 +8,7 @@ previewText: 'Uniswap RSK V2, the second iteration of the Uniswap protocol has b
 
 Uniswap RSK V2, the second iteration of the Uniswap protocol, has been [deployed to the RSK mainnet](https://explorer.rsk.co/address/0xf55c496bB1058690DB1401c4B9C19f3f44374961?__ctab=Code)!
 
-An [audit report and formal verification](https://uniswap-rsk.comaudit.html) has already been released.
+An [audit report and formal verification](/audit.html) has already been released.
 
 Developers can begin building on Uniswap RSK V2 immediately! Initial [docs](/docs/v2) and [example projects](http://github.com/Think-and-Dev/uniswap-v2-periphery/tree/master/contracts/examples) are already available.
 
@@ -47,6 +47,6 @@ While Uniswap V2 uses WRBTC, this is abstracted in the interface and RBTC can be
 ![](create.png)
 
 
-## All other questions
+<!-- ## All other questions
 
-For all questions, you can join and engage with the community in the [Uniswap Discord](https://discord.gg/XErMcTq).
+For all questions, you can join and engage with the community in the [Uniswap Discord](https://discord.gg/XErMcTq). -->

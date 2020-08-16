@@ -1,4 +1,9 @@
 const path = require('path')
+const express= require('express');
+
+exports.onCreateDevServer=({app})=>{
+    app.use(express.static('public'))
+}
 
 function getSlugPath(slug) {
   return slug.slice(1, slug.length - 1).split('/')

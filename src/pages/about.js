@@ -191,7 +191,7 @@ const About = props => {
             <p>This is not the official Uniswap site, this is an adaptation of that great project to the RSK network</p>
             <p>
               You can read about how Uniswap Protocol got started
-              <Link to="https://uniswap-rsk.comblog/uniswap-history/"> here.</Link>
+              <Link to="/blog/uniswap-history/"> here.</Link>
             </p>
           </StyledSectionFlex>
 
