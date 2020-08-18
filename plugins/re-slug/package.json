@@ -9,7 +9,7 @@
   "dependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
-    "babel-preset-gatsby-package": "^0.1.3",
+    "babel-preset-gatsby-package": "^0.5.2",
     "cross-env": "^5.1.4",
     "sash": "0.0.4"
   }
