@@ -6,7 +6,7 @@ featuredImage: ./featured.jpg
 previewText: 'All about Uniswap V2 on RSK. Price oracles, optimistic swaps and much much more. Launching July 2020.'
 ---
 
-**Uniswap RSK V2** is a fork of the famous [Uniswap Protocol](https://uniswap-rsk.com) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
+**Uniswap RSK V2** is a fork of the famous [Uniswap Protocol](https://rskswap.com) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
 
 - [ERC20 / ERC20 Pairs](#erc20--erc20-pairs)
 - [Price Oracles](#price-oracles)

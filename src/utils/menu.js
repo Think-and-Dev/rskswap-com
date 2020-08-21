@@ -4,7 +4,7 @@ const menu = [
     sublinks: [
       {
         name: 'App',
-        link: 'https://app.uniswap-rsk.com/',
+        link: 'https://app.rskswap.com/',
         description: 'Swap tokens and supply liquidity'
       },
       // {

@@ -12,7 +12,7 @@ An [audit report and formal verification](/audit.html) has already been released
 
 Developers can begin building on Uniswap RSK V2 immediately! Initial [docs](/docs/v2) and [example projects](http://github.com/Think-and-Dev/uniswap-v2-periphery/tree/master/contracts/examples) are already available.
 
-Today, An updated open source [interface](https://app.uniswap-rsk.com/) for swapping and liquidity provision on Uniswap RSK V2  is also being released:
+Today, An updated open source [interface](https://app.rskswap.com/) for swapping and liquidity provision on Uniswap RSK V2  is also being released:
 
 Uniswap V2 has many new features and technical improvements compared with Uniswap V1 including:
 
@@ -26,7 +26,7 @@ For full details on the benefits of Uniswap V2 for liquidity providers and trade
 
 ## Updated Interface
 
-The open source [interface](https://app.uniswap-rsk.com/) has been updated to work with Uniswap V2 on RSK!
+The open source [interface](https://app.rskswap.com/) has been updated to work with Uniswap V2 on RSK!
 
 It now supports creating and providing liquidity in ERC20 / ERC20 pairs, such as DOC/RIF.
 
