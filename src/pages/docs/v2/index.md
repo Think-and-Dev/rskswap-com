@@ -1,8 +1,8 @@
 ---
-title: Uniswap Documentation
+title: RSK Swap Documentation
 ---
 
-Welcome to Uniswap RSK Documentation! Uniswap RSK is a fork of the Uniswap Protocol, this is not the official Uniswap site. The pages that follow contain comprehensive documentation of the Uniswap V2 at RSK ecosystem. If you are new to Uniswap, you might want to check out the <Link to="/docs/v2/protocol-overview">Protocol Overview</Link> or <Link to="/faq">FAQ</Link> first.
+Welcome to RSK Swap Documentation! RSK Swap is a fork of the Uniswap Protocol, this is not the official Uniswap site. The pages that follow contain comprehensive documentation of the Uniswap V2 at RSK ecosystem. If you are new to Uniswap, you might want to check out the <Link to="/docs/v2/protocol-overview">Protocol Overview</Link> or <Link to="/faq">FAQ</Link> first.
 
 For a high-level overview of V2, see the <Link to='/blog/uniswap-v2'>introductory blog post</Link>.
 

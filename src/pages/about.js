@@ -185,7 +185,7 @@ const About = props => {
           <StyledSectionFlex id="about" style={{ flexDirection: 'column' }}>
             <Title style={{ width: '100%' }}>About</Title>
             <p>
-              Uniswap RSK is a fork of the Uniswap protocol, wich is developed by a small team in Brooklyn, NY alongside collaborators all across the
+              RSK Swap is a fork of the Uniswap protocol, wich is developed by a small team in Brooklyn, NY alongside collaborators all across the
               world.
             </p>
             <p>This is not the official Uniswap site, this is an adaptation of that great project to the RSK network</p>
@@ -273,7 +273,7 @@ const About = props => {
           <StyledSectionFlex id="brand" style={{ flexDirection: 'column' }}>
             <h1 style={{ width: '100%' }}>Brand Assets</h1>
             <p>
-              Download the logo and other brand assets samples <a href="/Uniswap_RSK_brand_assets.zip">here</a>.
+              Download the logo and other brand assets samples <a href="/RSK_Swap_brand_assets.zip">here</a>.
             </p>
           </StyledSectionFlex>
         </span>

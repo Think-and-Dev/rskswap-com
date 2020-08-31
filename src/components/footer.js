@@ -142,7 +142,7 @@ const Footer = () => {
               </a>
             </code>
           </Commit>
-          <p>Uniswap RSK is a fork of Uniswap, it is not the official Uniswap Protocol site</p>
+          <p>RSK Swap is a fork of Uniswap, it is not the official Uniswap Protocol site</p>
           <p>© 2020 Think and Dev</p>
           {/* <div>
             <label>

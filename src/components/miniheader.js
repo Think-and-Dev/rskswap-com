@@ -233,7 +233,7 @@ const Header = props => {
           {props.path && props.path !== '/' && props.path !== '' && (
             <>
               <StyledNavTitle to={'/' + props.path.split('/')[1]}>
-                {props.path.length > 20 ? 'Docs /' : 'Uniswap RSK Docs /'}
+                {props.path.length > 20 ? 'Docs /' : 'RSK Swap Docs /'}
               </StyledNavTitle>
               <StyledNavTitle to={'/docs/' + props.path.split('/')[2]}>
                 {props.path.split('/')[2].replace(/(^|\s)\S/g, function(t) {

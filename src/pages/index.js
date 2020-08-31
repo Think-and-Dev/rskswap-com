@@ -151,7 +151,7 @@ const IndexPage = props => {
       <SEO
         title="Home"
         path={props.location.pathname}
-        description={'Uniswap RSK is a fork of the Uniswap Protcol on RSK, a fully decentralized protocol for automated liquidity provision'}
+        description={'RSK Swap is a fork of the Uniswap Protcol on RSK, a fully decentralized protocol for automated liquidity provision'}
       />
       <StyledBody>
         <StyledTitle>
@@ -275,7 +275,7 @@ const SummarySection = props => {
       <StyledImgSection>
         <MiniNewInfo to="/blog/launch-uniswap-v2/">
           <NewPill>
-            <LinkTitle>Uniswap RSK</LinkTitle> Launch
+            <LinkTitle>RSK Swap</LinkTitle> Launch
           </NewPill>
           Read the announcement ↗
           <StyledUnicornImage fadeIn={false} fluid={props.data.unicornImage.childImageSharp.fluid} />
@@ -283,7 +283,7 @@ const SummarySection = props => {
       </StyledImgSection>
       <StyledImgSection>
         <h1>
-          <b>Uniswap RSK</b> is a fork of the Uniswap Protocol adapted for the RSK network. It is a fully decentralized protocol for automated liquidity provision. This site is not the official Uniswap Protocol site.
+          <b>RSK Swap</b> is a fork of the Uniswap Protocol adapted for the RSK network. It is a fully decentralized protocol for automated liquidity provision. This site is not the official Uniswap Protocol site.
         </h1>
 
         <p>
@@ -291,7 +291,7 @@ const SummarySection = props => {
         </p>
 
         <p>
-          Uniswap RSK empowers developers, liquidity providers and traders to participate in a financial marketplace that is
+          RSK Swap empowers developers, liquidity providers and traders to participate in a financial marketplace that is
           open and accessible to all.
         </p>
 
@@ -306,7 +306,7 @@ const SummarySection = props => {
 const DeveloperSection = () => {
   return (
     <>
-      <StyledSectionTitle>Build with Uniswap RSK</StyledSectionTitle>
+      <StyledSectionTitle>Build with RSK Swap</StyledSectionTitle>
       <StyledSectionFlex style={{ paddingBottom: '0px', paddingTop: '1rem' }}>
         <Wizard />
       </StyledSectionFlex>
@@ -319,8 +319,8 @@ const ProductsSection = props => {
     <>
       <StyledSectionFlex style={{ paddingBottom: '0px' }}>
         <StyledGoal style={{ width: '100%', maxWidth: '450px' }}>
-          <h1>Use Uniswap RSK</h1>
-          <p>Build open tools and experimental products that interact with Uniswap RSK.</p>
+          <h1>Use RSK Swap</h1>
+          <p>Build open tools and experimental products that interact with RSK Swap.</p>
         </StyledGoal>
       </StyledSectionFlex>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
@@ -372,7 +372,7 @@ const GoalSection = () => {
       <StyledGoal>
         <h1>Mission</h1>
         <p>
-          <b>Uniswap RSK</b> is transparent, censorship-resistant financial infrastructure for the RSK network.
+          <b>RSK Swap</b> is transparent, censorship-resistant financial infrastructure for the RSK network.
         </p>
         <p>Uniswap Protcol lowers barriers of entry to financial participation and removes central points of failure.</p>
         <p>

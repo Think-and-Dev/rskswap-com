@@ -8,7 +8,7 @@ import Menu from './menu'
 
 import Uni from '../images/uni.inline.svg'
 import UniDark from '../images/unidark.inline.svg'
-import Wordmark from '../images/rskfont1.inline.svg' // '../images/wordmark.inline.svg'
+import Wordmark from '../images/rskswap.inline.svg' // '../images/wordmark.inline.svg'
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
 

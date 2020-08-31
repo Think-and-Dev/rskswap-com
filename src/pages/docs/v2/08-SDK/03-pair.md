@@ -7,7 +7,7 @@ tags: sdk, documentation
 constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount)
 ```
 
-The Pair entity represents a Uniswap RSK pair with a balance of each of its pair tokens.
+The Pair entity represents a RSK Swap pair with a balance of each of its pair tokens.
 
 # Example
 

@@ -1,12 +1,12 @@
 ---
-title: 'Uniswap RSK V2 Overview'
+title: 'RSK Swap V2 Overview'
 date: '2020-06-10'
 author: 'Pedro Prete'
 featuredImage: ./featured.jpg
 previewText: 'All about Uniswap V2 on RSK. Price oracles, optimistic swaps and much much more. Launching July 2020.'
 ---
 
-**Uniswap RSK V2** is a fork of the famous [Uniswap Protocol](https://rskswap.com) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
+**RSK Swap** is a fork of the famous [Uniswap Protocol](https://rskswap.com) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
 
 - [ERC20 / ERC20 Pairs](#erc20--erc20-pairs)
 - [Price Oracles](#price-oracles)
@@ -21,7 +21,7 @@ For full details check out the:
 - [Core smart contracts](https://github.com/Think-and-Dev/uniswap-v2-core/)
 - [Periphery smart contracts](https://github.com/Think-and-Dev/uniswap-v2-periphery)
 - <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>Uniswap V2 Technical Whitepaper</a>
-- <Link to='/docs/v2/'>Uniswap RSK V2 Documentation</Link> (in progress!)
+- <Link to='/docs/v2/'>RSK Swap V2 Documentation</Link> (in progress!)
 
 ## ERC20 / ERC20 Pairs
 
@@ -181,7 +181,7 @@ For more details, please refer to the technical <a href='/whitepaper.pdf' target
 
 While the core smart contracts are finished and deployed on RSK, additional work is still in progress.
 
-- The interface, analytics site, API, and developer SDK are being updated to work with Uniswap RSK.
+- The interface, analytics site, API, and developer SDK are being updated to work with RSK Swap.
 - Documentation, guides, and examples are still being worked on.
 
 The factory and an V2 router smart contract have already been deployed in Mainnet and Testnet.

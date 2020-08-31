@@ -69,7 +69,7 @@ const cards = [
 
 module.exports = {
   siteMetadata: {
-    title: `Uniswap RSK`,
+    title: `RSK Swap`,
     description: `Automated liquidity protocol on RSK`,
     author: `@ThinkAndDev`,
     menulinks: menu,
@@ -157,7 +157,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-twitter-cards`,
             options: {
-              title: 'Uniswap RSK', // website title
+              title: 'RSK Swap', // website title
               separator: '|', // default
               author: '@ThinkAndDev',
               background: require.resolve('./static/images/twitter_card_bg.jpg'), // path to 1200x630px file or hex code, defaults to black (#000000)
