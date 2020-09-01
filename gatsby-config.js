@@ -25,16 +25,16 @@ const menu = [
   {
     name: 'Community',
     sublinks: [
-      { name: 'Twitter', link: 'https://twitter.com/UniswapProtocol' },
+      { name: 'Twitter', link: 'https://twitter.com/RskSwap' },
       // { name: 'Discord', link: 'https://discord.gg/EwFs3Pp' },
-      { name: 'Reddit', link: 'https://www.reddit.com/r/Uniswap' }
+      { name: 'Telegram', link: 'https://t.me/RskSwap' }
     ]
   },
   {
     name: 'Info',
     sublinks: [
       { name: 'About', link: '/about' },
-      //{ name: 'Brand Assets', link: '/about#brand-assets' }
+      { name: 'Brand Assets', link: '/about#brand-assets' }
     ]
   }
 ]
@@ -75,7 +75,7 @@ module.exports = {
     menulinks: menu,
     cardlinks: cards,
     siteUrl: `https://rskswap.com`,
-    repository: `https://github.com/Think-and-Dev/uniswap-org-rsk`,
+    repository: `https://github.com/Think-and-Dev/rskswap-com`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `master`
   },
   plugins: [

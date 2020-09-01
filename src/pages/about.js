@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import { Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import BG from '../components/bg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-// import MiniCard from '../components/minicard'
+import MiniCard from '../components/minicard'
 // import Discord from '../images/discord.inline.svg'
 
 const StyledAbout = styled.div`
@@ -106,31 +105,38 @@ const StyledHeadingLink = styled.a`
 `
 
 const About = props => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     twitter: file(relativePath: { eq: "twitter.png" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 960) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //     discord: file(relativePath: { eq: "discord.png" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 960) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //     reddit: file(relativePath: { eq: "reddit.png" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 960) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    {
+      twitter: file(relativePath: { eq: "twitter.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      discord: file(relativePath: { eq: "discord.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      telegram: file(relativePath: { eq: "telegram.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      reddit: file(relativePath: { eq: "reddit.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <Layout path={props.location.pathname}>
@@ -154,7 +160,7 @@ const About = props => {
             }}
           >
             Jobs
-          </StyledHeadingLink> 
+          </StyledHeadingLink> */}
           <StyledHeadingLink
             onClick={() => {
               scrollTo('#contact')
@@ -172,25 +178,23 @@ const About = props => {
             Community
           </StyledHeadingLink>
 
-          {/* <StyledHeadingLink
+           <StyledHeadingLink
             onClick={() => {
               scrollTo('#brand')
               window.history.pushState({}, '', '#brand')
             }}
           >
             Brand Assets
-          </StyledHeadingLink> */}
+          </StyledHeadingLink>
         </StyledSidebar>
         <span>
           <StyledSectionFlex id="about" style={{ flexDirection: 'column' }}>
             <Title style={{ width: '100%' }}>About</Title>
             <p>
-              RSK Swap is a fork of the Uniswap protocol, wich is developed by a small team in Brooklyn, NY alongside collaborators all across the
-              world.
+              RSK Swap is a fork of the Uniswap V2 protocol, developed by a small team in Buenos Aires, Argentina.
             </p>
-            <p>This is not the official Uniswap site, this is an adaptation of that great project to the RSK network</p>
             <p>
-              You can read about how Uniswap Protocol got started
+              You can read about how the original Uniswap Protocol got started
               <Link to="/blog/uniswap-history/"> here.</Link>
             </p>
           </StyledSectionFlex>
@@ -226,21 +230,20 @@ const About = props => {
             </p>
           </StyledSectionFlex> */}
 
-          {/* <StyledSectionFlex id="contact" style={{ flexDirection: 'column' }}>
+          <StyledSectionFlex id="contact" style={{ flexDirection: 'column' }}>
             <h1 style={{ width: '100%' }}>Contact</h1>
             <p>
-              To get in touch, please email <a href="mailto:contact@uniswap.org">contact@uniswap.org</a>
+              To get in touch, please email <a href="mailto:hello@rskswap.com">hello@rskswap.com</a>
             </p>
 
             <p>
-              As a small team <strong>we are unable to offer support</strong> in most cases but encourage anyone facing
-              issues with their wallet, transaction or Uniswap related question to join our active community discord.
+              As a small team <strong>we are unable to offer support</strong> in most cases. Use telegram to get support from the community.
             </p>
           </StyledSectionFlex> 
           <StyledSectionFlex id="community" style={{ paddingTop: '2rem' }}>
             <h1 style={{ width: '100%' }}>Community</h1>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-              <MiniCard
+             {/* <MiniCard
                 href="https://discord.gg/XErMcTq"
                 title={'Discord'}
                 small
@@ -248,27 +251,27 @@ const About = props => {
                 desc={'Real time discussion.'}
                 color={'white'}
                 backgroundColor={'#7289da'}
-              />
+              /> */}
               <MiniCard
-                href="https://twitter.com/UniswapProtocol"
+                href="https://twitter.com/RskSwap"
                 title={'Twitter'}
                 small
                 image={data.twitter.childImageSharp.fluid}
-                desc={'Updates from the Uniswap team.'}
+                desc={'Updates from the Rsk Swap team.'}
                 backgroundColor={'#B0D8F0'}
                 color={'black'}
               />
               <MiniCard
-                href="https://www.reddit.com/r/Uniswap"
-                title={'Reddit'}
+                href="https://t.me/RskSwap"
+                title={'Telegram'}
                 small
-                image={data.reddit.childImageSharp.fluid}
-                desc={'Slow form discussion'}
+                image={data.telegram.childImageSharp.fluid}
+                desc={'Real time discussion.'}
                 backgroundColor={'white'}
                 color={'black'}
               />
             </div>
-          </StyledSectionFlex>*/}
+          </StyledSectionFlex>
 
           <StyledSectionFlex id="brand" style={{ flexDirection: 'column' }}>
             <h1 style={{ width: '100%' }}>Brand Assets</h1>

@@ -108,10 +108,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Think-and-Dev/uniswap-org-rsk"
+    "url": "https://github.com/Think-and-Dev/rskswap-com"
   },
   "bugs": {
-    "url": "https://github.com/Think-and-Dev/uniswap-org-rsk/issues"
+    "url": "https://github.com/Think-and-Dev/rskswap-com/issues"
   },
   "snyk": true
 }

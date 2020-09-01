@@ -143,7 +143,7 @@ const Footer = () => {
             </code>
           </Commit>
           <p>RSK Swap is a fork of Uniswap, it is not the official Uniswap Protocol site</p>
-          <p>© 2020 Think and Dev</p>
+          <p><a href="https://www.thinkanddev.com/" rel="noreferrer" target="_blank">© 2020 Think and Dev</a></p>
           {/* <div>
             <label>
               <input type="checkbox" onChange={() => themeContext.toggleDark()} checked={themeContext.isDark} /> Dark
