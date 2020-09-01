@@ -70,7 +70,7 @@
     "react-instantsearch-dom": "^6.6.0",
     "react-intersection-observer": "^8.26.1",
     "react-moment": "^0.9.7",
-    "react-social-sharing": "^3.0.1",
+    "react-social-sharing": "^3.3.0",
     "react-use-clipboard": "1.0.0",
     "rehype-katex": "^3.0.0",
     "remark": "^11.0.2",
