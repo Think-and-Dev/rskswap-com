@@ -9,7 +9,7 @@ tags: smart-contracts, documentation
 
 # Address
 
-`UniswapV2Factory` is deployed at `0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1` on the RSK [mainnet](https://etherscan.io/address/0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1) and [Testnet](https://ropsten.etherscan.io/address/0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1). It was built from commit [8160750](https://github.com/Think-and-Dev/uniswap-v2-core/commit/816075049f811f1b061bca81d5d040b96f4c07eb).
+`UniswapV2Factory` is deployed at `0xfaa7762f551bba9b0eba34d6443d49d0a577c0e1` on the RSK [mainnet](https://explorer.rsk.co/address/0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1) and [Testnet](https://explorer.testnet.rsk.co/address/0xfaa7762F551bba9b0EbA34d6443d49d0a577c0e1). It was built from commit [8160750](https://github.com/Think-and-Dev/uniswap-v2-core/commit/816075049f811f1b061bca81d5d040b96f4c07eb).
 
 # Events
 

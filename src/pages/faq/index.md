@@ -10,11 +10,11 @@ Uniswap is a protocol for exchanging ERC-20 tokens on RSK. It eliminates trusted
 
 If you want to understand more about Uniswap check out the [docs](/docs/v2/).
 
-# How does Uniswap work?
+# How does RskSwap work?
 
 Uniswap is an automated liquidity protocol. In practical terms this means there are template smart contracts that define a standard way to make liquidity pools and corresponding markets that are compatible with eachother. There is no orderbook, no centralized party and no central facilitator of trade. Each pool is defined by a smart contract that includes a few functions to enable swapping tokens, adding liquidity and more. At its core each pool uses the function `x*y=k` to maintain a curve along which trades can happen.
 
-For a more in depth description. Check out the [How Uniswap works](/docs/v2/protocol-overview/how-uniswap-works/) from the documentation.
+For a more in depth description. Check out the [How RskSwap works](/docs/v2/protocol-overview/how-rskswap-works/) from the documentation.
 
 # How are prices determined?
 

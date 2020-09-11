@@ -11,7 +11,7 @@ Because routers are stateless and do not hold token balances, they can be replac
 
 # Address
 
-`UniswapV2Router02` is deployed at `0xf55c496bB1058690DB1401c4B9C19f3f44374961` on the RSK [mainnet](https://explorer.rsk.co/address/0xf55c496bb1058690DB1401c4b9C19F3f44374961?__ctab=general) and [Testnet](https://explorer.testnet.rsk.co/address/0xf55c496bb1058690DB1401c4b9C19F3f44374961?__ctab=general). It was built from commit [6961711](https://github.com/Think-and-Dev/uniswap-v2-periphery/commit/69617118cda519dab608898d62aaa79877a61004).
+`UniswapV2Router02` is deployed at `0xf55c496bb1058690DB1401c4b9C19F3f44374961` on the RSK [mainnet](https://explorer.rsk.co/address/0xf55c496bB1058690DB1401c4B9C19f3f44374961) and [Testnet](https://explorer.testnet.rsk.co/address/0xF55C496bB1058690db1401C4B9C19f3f44374961). It was built from commit [6961711](https://github.com/Think-and-Dev/uniswap-v2-periphery/commit/69617118cda519dab608898d62aaa79877a61004).
 
 # Read-Only Functions
 
