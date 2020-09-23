@@ -56,7 +56,7 @@
     "gatsby-transformer-sharp": "^2.5.3",
     "github-slugger": "^1.2.1",
     "graphql-tag": "^2.10.3",
-    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-fetch": "^3.0.0",
     "katex": "^0.11.1",
     "lunr": "^2.3.8",
     "marquee3000": "^1.1.1",
