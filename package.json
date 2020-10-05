@@ -102,9 +102,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write \"src/**/*.{js,jsx,md,mdx}\"",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
+    "format": "prettier --write \"src/**/*.{js,jsx,md,mdx}\""
   },
   "repository": {
     "type": "git",
