@@ -28,10 +28,10 @@ Thanks to some [fancy footwork in the factory](https://github.com/Think-and-Dev/
 
 ### Typescript
 
-This example makes use of the <Link to='docs/v2/SDK/getting-started'>Uniswap SDK</Link>. In reality, the SDK computes pair addresses behind the scenes, obviating the need to compute them manually like this.
+This example makes use of the <Link to='docs/v2/SDK/getting-started'>Rsk Swap SDK</Link>. In reality, the SDK computes pair addresses behind the scenes, obviating the need to compute them manually like this.
 
 ```typescript
-import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@uniswap/sdk'
+import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@thinkanddev/rskswap-sdk'
 import { pack, keccak256 } from '@ethersproject/solidity'
 import { getCreate2Address } from '@ethersproject/address'
 

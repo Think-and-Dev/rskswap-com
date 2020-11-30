@@ -7,7 +7,7 @@ Developing smart contracts for RSK involves a bevy of off-chain tools used for p
 that runs on the [RSK Virtual Machine (RVM), a fork of Ethereum Virtual Machine (EVM)](https://eth.wiki/en/concepts/evm/ethereum-virtual-machine-(evm)-awesome-list).
 Some tools also include workflows for deploying this bytecode to the RSK network and testnets.
 There are many options for these tools. This guide walks you through writing and testing a simple smart contract that
-interacts with the Uniswap Protocol using one specific set of tools (`truffle` + `npm` + `mocha`).
+interacts with the Rsk Swap Protocol using one specific set of tools (`truffle` + `npm` + `mocha`).
 
 ## Requirements
 
@@ -29,7 +29,7 @@ npx truffle init
 
 ## Setting up NPM
 
-In order to reference the Uniswap V2 contracts, you should use the NPM artifacts we deploy containing the core and
+In order to reference the Rsk Swap V2 contracts, you should use the NPM artifacts we deploy containing the core and
 periphery smart contracts and interfaces. To add npm dependencies, we first initialize the NPM package. 
 We can run `npm init` in the same directory to create a `package.json` file. You can accept all the defaults and
 change it later.
@@ -41,21 +41,21 @@ npm init
 ## Adding dependencies
 
 Now that we have an NPM package, we can add our dependencies. Let's add both the 
-[`@uniswap/v2-core`](https://www.npmjs.com/package/@uniswap/v2-core) and 
-[`@uniswap/v2-periphery`](https://www.npmjs.com/package/@uniswap/v2-periphery) packages.
+[`@thinkanddev/rskswap-core`](https://www.npmjs.com/package/@thinkanddev/rskswap-core) and 
+[`@thinkanddev/rskswap-periphery`](https://www.npmjs.com/package/@thinkanddev/rskswap-periphery) packages.
 
 ```shell script
-npm i --save @uniswap/v2-core
-npm i --save @uniswap/v2-periphery
+npm i --save @thinkanddev/rskswap-core
+npm i --save @thinkanddev/rskswap-periphery
 ```
 
-If you check the `node_modules/@uniswap` directory, you can now find the Uniswap V2 contracts. 
+If you check the `node_modules/@thinkanaddev` directory, you can now find the RsksWap V2 contracts. 
 
 ```shell script
-moody@MacBook-Pro ~/I/u/demo> ls node_modules/@uniswap/v2-core/contracts
+moody@MacBook-Pro ~/I/u/demo> ls node_modules/@thinkanddev/rskswap-core/contracts
 UniswapV2ERC20.sol    UniswapV2Pair.sol     libraries/
 UniswapV2Factory.sol  interfaces/           test/
-moody@MacBook-Pro ~/I/u/demo> ls node_modules/@uniswap/v2-periphery/contracts/
+moody@MacBook-Pro ~/I/u/demo> ls node_modules/@thinkanddev/rskswap-periphery/contracts/
 UniswapV2Migrator.sol  examples/              test/
 UniswapV2Router01.sol  interfaces/
 UniswapV2Router02.sol  libraries/
@@ -114,8 +114,8 @@ Let's put this in a separate function. To implement it, we must:
 The [`UniswapV2Library`](/docs/v2/smart-contracts/library/) has some helpful methods for this.
 
 ```solidity
-import '@uniswap/v2-periphery/contracts/libraries/UniswapV2Library.sol';
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
+import '@thinkanddev/rskswap-periphery/contracts/libraries/UniswapV2Library.sol';
+import '@thinkanddev/rskswap-core/contracts/interfaces/IUniswapV2Pair.sol';
 
 contract LiquidityValueCalculator is ILiquidityValueCalculator {
     function pairInfo(address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB, uint totalSupply) {
@@ -131,8 +131,8 @@ Finally we just need to compute the share value. We will leave that as an exerci
 
 ```solidity
 import './interfaces/ILiquidityValueCalculator.sol';
-import '@uniswap/v2-periphery/contracts/libraries/UniswapV2Library.sol';
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
+import '@thinkanddev/rskswap-periphery/contracts/libraries/UniswapV2Library.sol';
+import '@thinkanddev/rskswap-core/contracts/interfaces/IUniswapV2Pair.sol';
 
 contract LiquidityValueCalculator is ILiquidityValueCalculator {
     address public factory;
@@ -167,17 +167,17 @@ In order to test your contract, you need to:
 
 \#1 is handled for you automatically by the `truffle test` command.
 
-Note you should only deploy the precompiled Uniswap contracts in the `build` directories for unit tests. 
+Note you should only deploy the precompiled Rsk Swap contracts in the `build` directories for unit tests. 
 This is because solidity appends a metadata hash to compiled contract artifacts which includes the hash of the contract
 source code path, and compilations on other machines will not result in the exact same bytecode.
-This is problematic because in Uniswap V2 we use the hash of the bytecode in the v2-periphery
-[`UniswapV2Library`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L24),
+This is problematic because in Rsk Swap we use the hash of the bytecode in the v2-periphery
+[`UniswapV2Library`](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L24),
 to compute the pair address.
 
 To get the bytecode for deploying UniswapV2Factory, you can import the file via:
 
 ```javascript
-const UniswapV2FactoryBytecode = require('@uniswap/v2-core/build/UniswapV2Factory.json').bytecode
+const UniswapV2FactoryBytecode = require('@@thinkanddev/rskswap-core/build/UniswapV2Factory.json').bytecode
 ```
 
 We recommend using a standard ERC20 from `@openzeppelin/contracts` for deploying an ERC20.

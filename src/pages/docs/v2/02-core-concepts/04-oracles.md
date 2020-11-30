@@ -42,14 +42,14 @@ TWAPs can be used directly or as the basis for moving averages (EMAs and SMAs) a
 A few notes:
 
 - For a 10-minute TWAP, sample once every 10 minutes. For a 1-week TWAP, sample once every week.
-- For a simple TWAP, the cost of manipulation increases (approx. linear) with liquidity on Uniswap, as well as (approx. linear) with the length of time over which you average.
+- For a simple TWAP, the cost of manipulation increases (approx. linear) with liquidity on Rsk Swap, as well as (approx. linear) with the length of time over which you average.
 - Cost of an attack is relatively simple to estimate. Moving the price 5% on a 1-hour TWAP is approximately equal to the amount lost to arbitrage and fees for moving the price 5% every block for 1 hour.
 
-There are some nuances that are good to be aware of when using Uniswap V2 as an oracle, especially where manipulation resistance is concerned. The <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> elaborates on some of them. Additional oracle-focused developer guides and documentation will be released soon.
+There are some nuances that are good to be aware of when using Rsk Swap as an oracle, especially where manipulation resistance is concerned. The <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> elaborates on some of them. Additional oracle-focused developer guides and documentation will be released soon.
 
-In the meantime, check out our [example implementation](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Uniswap V2!
+In the meantime, check out our [example implementation](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Rsk Swap V2!
 
-In summary, Uniswap V2 introduces a 2 new variables in each pair, `price0CumulativeLast` and `price1CumulativeLast`, that store the prices of `token0` and `token1` respectively, multiplied by for how long they were observed (in seconds). These variables are cumulative, meaning they are ever-increasing. They are updated with the first `swap`/`mint`/`burn` of each block.
+In summary, Rsk Swap introduces a 2 new variables in each pair, `price0CumulativeLast` and `price1CumulativeLast`, that store the prices of `token0` and `token1` respectively, multiplied by for how long they were observed (in seconds). These variables are cumulative, meaning they are ever-increasing. They are updated with the first `swap`/`mint`/`burn` of each block.
 
 You can use these either of these new variables to compute an average price between 2 observations. To do so, take the difference (i.e. subtraction) of two observations, and divide by the time elapsed between them. This is the basis of building oracles on top of V2.
 
@@ -57,11 +57,11 @@ You can use these either of these new variables to compute an average price betw
 
 The cost of manipulating the price for a specific time period can be roughly estimated as the amount lost to arbitrage and fees every block for the entire period. For larger liquidity pools and over longer time periods, this attack is impractical, as the cost of manipulation typically exceeds the value at stake.
 
-Other factors such as network congestion can reduce the cost of attack. For a more in-depth review of the security of Uniswap V2 price oracles, read the [security audit section on Oracle Integrity](/audit.html#org87c8b91).
+Other factors such as network congestion can reduce the cost of attack. For a more in-depth review of the security of Rsk Swap price oracles, read the [security audit section on Oracle Integrity](/audit.html#org87c8b91).
 
-## Using Uniswap V2 price oracles
+## Using Rsk Swap price oracles
 
-Importantly, Uniswap V2 is not opinionated on how you use the new cumulative price variables, allowing you to build oracles that compute different kinds of price averages and over different periods.
+Importantly, Rsk Swap is not opinionated on how you use the new cumulative price variables, allowing you to build oracles that compute different kinds of price averages and over different periods.
 
 # Building an oracle
 

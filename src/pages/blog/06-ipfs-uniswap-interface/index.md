@@ -9,14 +9,12 @@ previewText: 'The Uniswap Interface is now served exclusively from IPFS'
 # TL;DR
 
 - In an effort to continue decentralizing, we have created a mechanism for the community to host the Uniswap Interface
-- The open-source [Uniswap Interface](https://github.com/Uniswap/uniswap-interface) built by our team and 
-community is [automatically deployed](https://github.com/Uniswap/uniswap-interface/releases) daily to IPFS
+- The open-source [RSK Swap Interface](https://github.com/Think-and-Dev/rskswap-frontend) built by our team and 
+community is [automatically deployed](https://github.com/Think-and-Dev/rskswap-frontend/releases) daily to IPFS
 - Community members can pin the IPFS hashes to ensure availability
-- We use IPNS + DNSLink to point `/ipns/app.uniswap.org` to the latest [IPFS release](https://github.com/Uniswap/uniswap-interface/releases) 
-- [app.uniswap.org](https://app.uniswap.org) is now served exclusively from the latest 
-[IPFS release](https://github.com/Uniswap/uniswap-interface/releases), however any IPFS gateway can be used directly
-- The URL [uniswap.exchange](https://uniswap.exchange) now forwards to [app.uniswap.org](https://app.uniswap.org)
-- The ENS contenthash for `uniswap.eth` now points to the latest IPFS release allowing the URL [uniswap.eth.link](https://uniswap.eth.link/) to be used
+- We use IPNS + DNSLink to point `/ipns/app.rskswap.com` to the latest [IPFS release](https://github.com/Think-and-Dev/rskswap-frontend/releases) 
+- [app.rskswap.com](https://app.rskswap.com) is now served exclusively from the latest 
+[IPFS release](https://github.com/Think-and-Dev/rskswap-frontend/releases), however any IPFS gateway can be used directly
 
 ## Interfaces and decentralization
 
@@ -47,9 +45,8 @@ is now deployed at least once per day to IPFS. Each release is automatically [pi
 using [pinata.cloud](https://pinata.cloud), a free IPFS pinning service. 
 The IPFS releases can be found [on GitHub](https://github.com/Uniswap/uniswap-interface/releases).
 
-This means the Uniswap Interface can now be accessed via IPFS directly, through a gateway such as [cloudflare-ipfs.com](https://cloudflare-ipfs.com/ipns/app.uniswap.org/), or by an _alias_ to the Cloudflare gateway at [app.uniswap.org](https://app.uniswap.org).
+This means the Uniswap Interface can now be accessed via IPFS directly, through a gateway such as [cloudflare-ipfs.com](https://cloudflare-ipfs.com/ipns/app.uniswap.org/), or by an _alias_ to the Cloudflare gateway at [app.rskswap.com](https://app.rskswap.com).
 
-The domain uniswap.exchange is now redirected to app.uniswap.org, which is an alias to the Cloudflare IPFS gateway that serves the Uniswap Interface from IPFS.
 
 ## How we did it
 
@@ -64,13 +61,13 @@ Cloudflare’s IPFS gateway then fetches the content using the IPFS protocol and
 
 ## Some changes
 
-Because IPFS gateways will not default to serving `/index.html` as is expected by many single page applications, the Uniswap Interface uses a "hash" based router.
+Because IPFS gateways will not default to serving `/index.html` as is expected by many single page applications, the Rsk Swap Interface uses a "hash" based router.
 
-This means that links that contain paths, such as [app.uniswap.org/swap](https://app.uniswap.org) will no longer work, but [app.uniswap.org/#/pool](https://app.uniswap.org/#/swap) will work.
+This means that links that contain paths, such as [app.rskswap.com/swap](https://app.rskswap.com) will no longer work, but [app.rskswap.com/#/pool](https://app.uniswap.org/#/swap) will work.
 
 ## Security Unicorn
 
-Some settings on the Uniswap Interface use localstorage, which is shared across users in some IPFS gateways.
+Some settings on the Rsk Swap Interface use localstorage, which is shared across users in some IPFS gateways.
 
 When using an IPFS gateway and referencing an IPFS hash or IPNS name by the _path_ 
 (e.g. [cloudflare-ipfs.com/ipfs/QmdJApBwfsGua9v.../](https://cloudflare-ipfs.com/ipfs/QmdJApBwfsGua9vKnMbswGFGA4y5Kj2VNNPhvcsc8NC7iA/)) 
@@ -79,7 +76,7 @@ rather than the _subdomain_
 other sites accessed from the same IPFS gateway can view and change your settings in the Uniswap Interface.
 
 To avoid this possibility, you can use the subdomain format of IPFS gateway URLs, which are contained in 
-[every release](https://github.com/Uniswap/uniswap-interface/releases) along with the path format.
+[every release](https://github.com/Think-and-dev/rskswap-frontend/releases) along with the path format.
 
 ## Verifying a build
 
@@ -91,6 +88,6 @@ Cloudflare's gateway uses the IPFS hash of the deployment in the `etag` header, 
 
 ## How you can help
 
-To keep the Uniswap Interface available, you can pin the hash of the [latest release](https://github.com/Uniswap/uniswap-interface/releases/latest).
+To keep the Rsk Swap Interface available, you can pin the hash of the [latest release](https://github.com/Think-and-dev/rskswap-frontend/releases/latest).
 
-If this sort of work sounds cool to you, we're hiring! [Shoot us a message!](mailto:contact@uniswap.org)
+If this sort of work sounds cool to you, we're hiring! [Shoot us a message!](mailto:hello@thinkanddev.com)

@@ -14,7 +14,7 @@ This guide will focus exclusively on sending a transaction to the <Link to='/doc
 Let's say we want to trade 1 WRBTC for as much DOC as possible:
 
 ```typescript
-import { ChainId, Token, WETH, Pair, Trade } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token, WETH, Pair, Trade } from '@thinkanddev/rskswap-sdk'
 
 const DOC = new Token(ChainId.RSK_MAINNET, '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB', 18)
 
@@ -47,7 +47,7 @@ function swapExactETHForTokens(uint amountOutMin, address[] calldata path, addre
 Jumping back to our trading code, we can construct all the necessary parameters:
 
 ```typescript
-import { Percent } from '@thinkanddev/uniswap-sdk-rsk'
+import { Percent } from '@thinkanddev/rskswap-sdk'
 
 const slippageTolerance = new Percent('50', '10000') // 50 bips, or 0.50%
 

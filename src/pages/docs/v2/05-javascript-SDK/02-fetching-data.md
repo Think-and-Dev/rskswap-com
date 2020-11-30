@@ -28,7 +28,7 @@ The next piece of data we need is **decimals**.
 One option here is to simply pass in the correct value, which we may know is `18`. At this point, we're ready to represent DOC as a <Link to='/docs/v2/SDK/token'>Token</Link>:
 
 ```typescript
-import { ChainId, Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token } from '@thinkanddev/rskswap-sdk'
 
 const chainId = ChainId.RSK_MAINNET
 const tokenAddress = '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB' // must be checksummed
@@ -40,7 +40,7 @@ const DOC = new Token(chainId, tokenAddress, decimals)
 If we don't know or don't want to hardcode the value, we could look it up ourselves via any method of retrieving on-chain data in a function that looks something like:
 
 ```typescript
-import { ChainId } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId } from '@thinkanddev/rskswap-sdk'
 
 async function getDecimals(chainId: ChainId, tokenAddress: string): Promise<number> {
   // implementation details
@@ -52,7 +52,7 @@ async function getDecimals(chainId: ChainId, tokenAddress: string): Promise<numb
 If we don't want to provide or look up the value ourselves, we can ask the SDK to look it up for us with <Link to='/docs/v2/SDK/token#fetchdata'>Token.fetchData</Link>:
 
 ```typescript
-import { ChainId, Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token } from '@thinkanddev/rskswap-sdk'
 
 const chainId = ChainId.RSK_MAINNET
 const tokenAddress = '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB' // must be checksummed
@@ -69,7 +69,7 @@ By default, this method will use the [default provider defined by ethers.js](htt
 Finally, we can talk about **symbol** and **name**. Because these fields aren't used anywhere in the SDK itself, they're optional, and can be provided if you want to use them in your application. However, the SDK will not fetch them for you, so you'll have to provide them:
 
 ```typescript
-import { ChainId, Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token } from '@thinkanddev/rskswap-sdk'
 
 const DOC = new Token(
   ChainId.RSK_MAINNET,
@@ -83,7 +83,7 @@ const DOC = new Token(
 or:
 
 ```typescript
-import { ChainId, Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token } from '@thinkanddev/rskswap-sdk'
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -115,7 +115,7 @@ The data we need is the _reserves_ of the pair. To read more about reserves, see
 One option here is to simply pass in values which we've fetched ourselves to create a <Link to='/docs/v2/SDK/pair'>Pair</Link>:
 
 ```typescript
-import { ChainId, Token, WETH, Pair, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token, WETH, Pair, TokenAmount } from '@thinkanddev/rskswap-sdk'
 
 const DOC = new Token(ChainId.RSK_MAINNET, '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB', 18)
 
@@ -140,7 +140,7 @@ Note that these values can change as frequently as every block, and should be ke
 If we don't want to look up the value ourselves, we can ask the SDK to look them up for us with <Link to='/docs/v2/SDK/token#fetchdata'>Pair.fetchData</Link>:
 
 ```typescript
-import { ChainId, Token, WETH, Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token, WETH, Pair } from '@thinkanddev/rskswap-sdk'
 
 const DOC = new Token(ChainId.RSK_MAINNET, '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB', 18)
 

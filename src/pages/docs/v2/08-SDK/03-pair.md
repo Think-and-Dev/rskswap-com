@@ -12,7 +12,7 @@ The Pair entity represents a RSK Swap pair with a balance of each of its pair to
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token, TokenAmount, Pair } from '@thinkanddev/rskswap-sdk'
 
 const HOT = new Token(ChainId.RSK_MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
 const NOT = new Token(ChainId.RSK_MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')

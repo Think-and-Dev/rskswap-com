@@ -3,7 +3,7 @@ title: Building an Oracle
 tags: oracles, documentation
 ---
 
-To build a price oracle on Uniswap V2, you must first understand the
+To build a price oracle on Rsk Swap, you must first understand the
 requirements for your use case. Once you understand the kind of price
 average you require, it is a matter of storing the cumulative price
 variable from the pair as often as necessary, and computing
@@ -33,9 +33,9 @@ store the cumulative price once per period (e.g. once per 24 hours.)
 Computing the average price over these data points gives you 'fixed windows',
 which can be updated after the lapse of each period. We wrote
 an example oracle of this kind
-[here](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol).
+[here](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol).
 
-<Github href="https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol">ExampleOracleSimple.sol</Github>
+<Github href="https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol">ExampleOracleSimple.sol</Github>
 
 This example does not limit the maximum size of the fixed window, i.e.
 it only requires that the window size is greater than 1 period (e.g. 24 hours).
@@ -48,12 +48,12 @@ than once per period.
 
 There are at least
 [two kinds of moving averages](https://www.investopedia.com/terms/m/movingaverage.asp#types-of-moving-averages)
-that you can compute using the Uniswap cumulative price variable.
+that you can compute using the Rsk Swap cumulative price variable.
 
 [Simple moving averages](https://www.investopedia.com/terms/s/sma.asp)
 give equal weight to each price measurement. We have built
 an example of a sliding window oracle
-[here](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol).
+[here](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol).
 
 [Exponential moving averages](https://www.investopedia.com/terms/e/ema.asp)
 give more weight to the most recent price measurements. We do not yet have an example written for this type of oracle.
@@ -84,7 +84,7 @@ in the current block, e.g. because there has not been any liquidity event (`mint
 block, you can compute the cumulative price counterfactually.
 
 We provide a library for use in oracle contracts that has the method
-[`UniswapV2OracleLibrary#currentCumulativePrices`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2OracleLibrary.sol#L16)
+[`UniswapV2OracleLibrary#currentCumulativePrices`](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/libraries/UniswapV2OracleLibrary.sol#L16)
 for getting the cumulative price as of the current block.
 The current cumulative price returned by this method is computed _counterfactually_, meaning it requires no call to
 the relative gas-expensive `#sync` method on the pair.
@@ -107,10 +107,10 @@ the cumulative prices, which is always expected to be less than `2^32` seconds.
 
 When computing time elapsed within your own oracle, you can simply store the `block.timestamp` of your observations
 as `uint256`, and avoid dealing with overflow math for computing the time elapsed between observations. This is how the
-[ExampleSlidingWindowOracle](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol)
+[ExampleSlidingWindowOracle](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol)
 handles observation timestamps.
 
-<Github href="https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol">ExampleSlidingWindowOracle</Github>
+<Github href="https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol">ExampleSlidingWindowOracle</Github>
 
 ## Integrating the oracle
 

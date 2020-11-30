@@ -3,11 +3,11 @@ title: SDK Quick start
 tags: SDK, developer-guides, documentation
 ---
 
-The Uniswap SDK exists to help developers build on top of Uniswap. It's designed to run in any environment that can execute JavaScript (think websites, node scripts, etc.). While simple enough to use in a hackathon project, it's also robust enough to power production applications.
+The Rsk Swap SDK exists to help developers build on top of Rsk Swap. It's designed to run in any environment that can execute JavaScript (think websites, node scripts, etc.). While simple enough to use in a hackathon project, it's also robust enough to power production applications.
 
 # Installation
 
-The easiest way to consume the SDK is via NPM. To install it in your project, simply run `yarn add @thinkanddev/uniswap-sdk-rsk` (or `npm install @thinkanddev/uniswap-sdk-rsk`).
+The easiest way to consume the SDK is via NPM. To install it in your project, simply run `yarn add @thinkanddev/rskswap-sdk` (or `npm install @thinkanddev/rskswap-sdk`).
 
 # Usage
 
@@ -16,15 +16,15 @@ To run code from the SDK in your application, use an `import` or `require` state
 ## ES6 (import)
 
 ```typescript
-import { ChainId } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId } from '@thinkanddev/rskswap-sdk'
 console.log(`The chainId of mainnet is ${ChainId.RSK_MAINNET}.`)
 ```
 
 ## CommonJS (require)
 
 ```typescript
-const UNISWAP = require('@thinkanddev/uniswap-sdk-rsk')
-console.log(`The chainId of mainnet is ${UNISWAP.ChainId.RSK_MAINNET}.`)
+const RSKSWAP = require('@thinkanddev/rskswap-sdk')
+console.log(`The chainId of mainnet is ${RSKSWAP.ChainId.RSK_MAINNET}.`)
 ```
 
 # Reference

@@ -3,11 +3,11 @@ title: Pair
 tags: smart-contracts, documentation
 ---
 
-This documentation covers Uniswap-specific functionality. For ERC-20 functionality, see <Link to='/docs/v2/smart-contracts/pair-erc-20'>Pair (ERC-20)</Link>.
+This documentation covers Rsk swap specific functionality. For ERC-20 functionality, see <Link to='/docs/v2/smart-contracts/pair-erc-20'>Pair (ERC-20)</Link>.
 
 # Code
 
-[`UniswapV2Pair.sol`](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)
+[`UniswapV2Pair.sol`](https://github.com/Think-and-Dev/rskswap-core/blob/master/contracts/UniswapV2Pair.sol)
 
 # Address
 
@@ -173,7 +173,7 @@ See the <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whit
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
+import '@thinkanddev/rskswap-core/contracts/interfaces/IUniswapV2Pair.sol';
 ```
 
 ```solidity

@@ -9,7 +9,7 @@ This section explains the Uniswap Subgraph and how to interact with it. The Unis
 
 [Subgraph Explorer](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2) - sandbox for querying data and endpoints for developers.
 
-[Uniswap V2 Subgraph](https://github.com/Uniswap/uniswap-v2-subgraph) - source code for deployed subgraph.
+[Uniswap V2 Subgraph](https://github.com/Think-and-Dev/rskswap-subgraph) - source code for deployed subgraph.
 
 ## Usage
 

@@ -3,11 +3,11 @@ title: Pair (ERC-20)
 tags: smart-contracts, documentation
 ---
 
-This documentation covers ERC-20 functionality for denominating pool tokens. For Uniswap-specific functionality, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
+This documentation covers ERC-20 functionality for denominating pool tokens. For Rsk Swap specific functionality, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
 
 # Code
 
-[`UniswapV2ERC20.sol`](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)
+[`UniswapV2ERC20.sol`](https://github.com/Think-and-Dev/rskswap-core/blob/master/contracts/UniswapV2ERC20.sol)
 
 # Events
 
@@ -148,7 +148,7 @@ Sets the allowance for a spender where approval is granted via a signature.
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2ERC20.sol';
+import '@thinkanddev/rskswap-core/contracts/interfaces/IUniswapV2ERC20.sol';
 ```
 
 ```solidity
@@ -180,7 +180,7 @@ interface IUniswapV2ERC20 {
 # ABI
 
 ```typescript
-import IUniswapV2ERC20 from '@uniswap/v2-core/build/IUniswapV2ERC20.json'
+import IUniswapV2ERC20 from '@thinkanddev/rskswap-core/build/IUniswapV2ERC20.json'
 ```
 
 [https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2ERC20.json](https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2ERC20.json)

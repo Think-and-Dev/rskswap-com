@@ -30,13 +30,13 @@ Additionally, it exports a number of custom types:
 To start using the SDK, simply install it into your project...
 
 ```bash
-yarn add @thinkanddev/uniswap-rsk-sdk
+yarn add @thinkanddev/rskswap-sdk
 ```
 
 ...import some functions...
 
 ```javascript
-import { ... } from '@thinkanddev/uniswap-rsk-sdk'
+import { ... } from '@thinkanddev/rskswap-sdk'
 ```
 
 ...and dive into the rest of the documentation to learn more!

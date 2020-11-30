@@ -3,7 +3,7 @@ title: 'RSK Swap V2 Overview'
 date: '2020-06-10'
 author: 'Pedro Prete'
 featuredImage: ./featured.jpg
-previewText: 'All about Uniswap V2 on RSK. Price oracles, optimistic swaps and much much more. Launching July 2020.'
+previewText: 'All about Rsk Swap. Price oracles, optimistic swaps and much much more. Launching July 2020.'
 ---
 
 **RSK Swap** is a fork of the famous [Uniswap Protocol](https://rskswap.com) adapted to work on the RSK Network. It includes many new features and improvements. This article will serve as a high-level overview of these changes including:
@@ -18,8 +18,8 @@ previewText: 'All about Uniswap V2 on RSK. Price oracles, optimistic swaps and m
 
 For full details check out the:
 
-- [Core smart contracts](https://github.com/Think-and-Dev/uniswap-v2-core/)
-- [Periphery smart contracts](https://github.com/Think-and-Dev/uniswap-v2-periphery)
+- [Core smart contracts](https://github.com/Think-and-Dev/rskswap-core/)
+- [Periphery smart contracts](https://github.com/Think-and-Dev/rskswap-periphery)
 - <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>Uniswap V2 Technical Whitepaper</a>
 - <Link to='/docs/v2/'>RSK Swap V2 Documentation</Link> (in progress!)
 
@@ -71,7 +71,7 @@ A few notes:
 
 There are some nuances that are good to be aware of when using Uniswap V2 as an oracle, especially where manipulation resistance is concerned. The <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> elaborates on some of them. Additional oracle-focused developer guides and documentation will be released soon.
 
-In the meantime, check out our [example implementation](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Uniswap V2!
+In the meantime, check out our [example implementation](https://github.com/Think-and-Dev/rskswapperiphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Uniswap V2!
 
 ## Flash Swaps
 
@@ -111,20 +111,20 @@ If the Uniswap pool does not receive enough DAI to cover the RBTC withdrawn, the
 
 ## Core/Helper Architecture
 
-[Uniswap V2 Core](https://github.com/Think-and-Dev/uniswap-v2-core) are the essential Uniswap V2 smart contracts, consisting of:
+[Uniswap V2 Core](https://github.com/Think-and-Dev/rskswap-core) are the essential Uniswap V2 smart contracts, consisting of:
 
-- [UniswapV2Pair.sol](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol), which implements core swapping and liquidity provision functionality
-- [UniswapV2Factory.sol](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol), which deploys [UniswapV2Pair.sol](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) contracts for any ERC20 token/ERC20 token pair
+- [UniswapV2Pair.sol](https://github.com/Think-and-Dev/rskswap-core/blob/master/contracts/UniswapV2Pair.sol), which implements core swapping and liquidity provision functionality
+- [UniswapV2Factory.sol](https://github.com/Think-and-Dev/rskswap-core/blob/master/contracts/UniswapV2Factory.sol), which deploys [UniswapV2Pair.sol](https://github.com/Think-and-Dev/rskswap-core/blob/master/contracts/UniswapV2Pair.sol) contracts for any ERC20 token/ERC20 token pair
 
 **Core is minimalist in design, removing all logic that is not strictly necessary to secure liquidity stored in its pools.** Logic related to trader security or ease-of-use must be implemented in external helper contracts. Since external helpers can be improved and replaced without needing to migrate liquidity, **this improves on the flexibility and modularity of Uniswap.**
 
-[Uniswap V2 Periphery](https://github.com/Think-and-Dev/uniswap-v2-periphery) (periphery) is an initial set of helpers, including:
+[Uniswap V2 Periphery](https://github.com/Think-and-Dev/rskswap-periphery) (periphery) is an initial set of helpers, including:
 
-- [A router contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) that performs the safety checks needed for safely swapping, adding, and removing liquidity.
-- [A migrator contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/UniswapV2Migrator.sol) that can remove liquidity from Uniswap V1 and deposit it into Uniswap V2 in a single transaction.
-- [A library contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol) that can be used in the creation of other helper contracts.
-- [An example oracle contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) that creates a simple TWAP from Uniswap V2 cumulative prices.
-- [An example flash swap contract](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol) that withdraws ERC20 tokens, executes arbitrary code, and then pays for them.
+- [A router contract](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/UniswapV2Router02.sol) that performs the safety checks needed for safely swapping, adding, and removing liquidity.
+- [A migrator contract](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/UniswapV2Migrator.sol) that can remove liquidity from Uniswap V1 and deposit it into Uniswap V2 in a single transaction.
+- [A library contract](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/libraries/UniswapV2Library.sol) that can be used in the creation of other helper contracts.
+- [An example oracle contract](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) that creates a simple TWAP from Uniswap V2 cumulative prices.
+- [An example flash swap contract](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol) that withdraws ERC20 tokens, executes arbitrary code, and then pays for them.
 
 _Periphery contracts described as "Example" are for illustrative purposes only and should not be used in actual transactions._
 

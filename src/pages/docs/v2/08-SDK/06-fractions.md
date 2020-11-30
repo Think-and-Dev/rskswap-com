@@ -100,7 +100,7 @@ Responsible for formatting percentages (10% instead of 0.1).
 ## Example
 
 ```typescript
-import { Percent } from '@thinkanddev/uniswap-sdk-rsk'
+import { Percent } from '@thinkanddev/rskswap-sdk'
 
 const percent = new Percent('60', '100')
 console.log(percent.toSignificant(2)) // 60
@@ -125,7 +125,7 @@ Responsible for formatting token amounts with specific decimal places.
 ## Example
 
 ```typescript
-import { Token, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token, TokenAmount } from '@thinkanddev/rskswap-sdk'
 
 const FRIED = new Token(ChainId.RSK_MAINNET, '0xfa1aFe1000000000000000000000000000000000', 18, 'FRIED', 'Beans')
 
@@ -188,7 +188,7 @@ Responsible for denominating the relative price between two tokens. Denominator 
 ## Example
 
 ```typescript
-import { ChainId, WETH as WETHs, Token, Price } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, WETH as WETHs, Token, Price } from '@thinkanddev/rskswap-sdk'
 
 const WRBTC = WETHs[ChainId.RSK_MAINNET]
 const ABC = new Token(ChainId.RSK_MAINNET, '0xabc0000000000000000000000000000000000000', 18, 'ABC')

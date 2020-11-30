@@ -3,7 +3,7 @@ title: Flash Swaps
 tags: smart contract integration, developer-guides, documentation
 ---
 
-Flash swaps are an integral feature of Uniswap V2. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because RSK transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
+Flash swaps are an integral feature of Rsk Swap. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because RSK transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
 
 To see how this all works, let's start by examining the interface of the `swap` function:
 
@@ -48,7 +48,7 @@ At the end of `uniswapV2Call`, contracts must return enough tokens to the pair t
 
 In the case where the token withdrawn is _not_ the token returned (i.e. DOC was requested in the flash swap, and WRBTC was returned, or vice versa), the fee simplifies to the simple swap case. This means that the standard `getAmountIn` pricing function should be used to calculate e.g. the amount of WRBTC that must be returned in exchange for the amount of DOC that was requested out.
 
-This fee calculation is an excellent reason to use Uniswap flash swaps - if you pay for your flash swap in the corresponding pair token, it's free!
+This fee calculation is an excellent reason to use Rsk Swap flash swaps - if you pay for your flash swap in the corresponding pair token, it's free!
 
 ## Single-Token
 
@@ -72,12 +72,12 @@ For further exploration of flash swaps, see the <a href='/whitepaper.pdf' target
 
 A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
 
-<Github href="https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
+<Github href="https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
 
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Callee.sol';
+import '@thinkanddev/rskswap-core/contracts/interfaces/IUniswapV2Callee.sol';
 ```
 
 ```solidity

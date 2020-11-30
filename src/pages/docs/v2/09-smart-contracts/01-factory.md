@@ -5,11 +5,11 @@ tags: smart-contracts, documentation
 
 # Code
 
-[`UniswapV2Factory.sol`](https://github.com/Think-and-Dev/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol)
+[`UniswapV2Factory.sol`](https://github.com/Think-and-Dev/rskswap-core/blob/master/contracts/UniswapV2Factory.sol)
 
 # Address
 
-`UniswapV2Factory` is deployed at `0xfaa7762f551bba9b0eba34d6443d49d0a577c0e1` on the RSK [mainnet](https://explorer.rsk.co/address/0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1) and [Testnet](https://explorer.testnet.rsk.co/address/0xfaa7762F551bba9b0EbA34d6443d49d0a577c0e1). It was built from commit [8160750](https://github.com/Think-and-Dev/uniswap-v2-core/commit/816075049f811f1b061bca81d5d040b96f4c07eb).
+`UniswapV2Factory` is deployed at `0xfaa7762f551bba9b0eba34d6443d49d0a577c0e1` on the RSK [mainnet](https://explorer.rsk.co/address/0xFaA7762F551Bba9b0eBA34d6443d49d0a577c0E1) and [Testnet](https://explorer.testnet.rsk.co/address/0xfaa7762F551bba9b0EbA34d6443d49d0a577c0e1). It was built from commit [8160750](https://github.com/Think-and-Dev/rskswap-core/commit/816075049f811f1b061bca81d5d040b96f4c07eb).
 
 # Events
 
@@ -87,7 +87,7 @@ Creates a pair for `tokenA` and `tokenB` if one doesn't exist already.
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Factory.sol';
+import '@thinkanddev/rskswap-core/contracts/interfaces/IUniswapV2Factory.sol';
 ```
 
 ```solidity
@@ -110,7 +110,7 @@ interface IUniswapV2Factory {
 # ABI
 
 ```typescript
-import IUniswapV2Factory from '@uniswap/v2-core/build/IUniswapV2Factory.json'
+import IUniswapV2Factory from '@thinkanddev/rskswap-core/build/IUniswapV2Factory.json'
 ```
 
 [https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Factory.json](https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Factory.json)

@@ -7,7 +7,7 @@ Because routers are stateless and do not hold token balances, they can be replac
 
 # Code
 
-[`UniswapV2Router02.sol`](https://github.com/Think-and-Dev/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)
+[`UniswapV2Router02.sol`](https://github.com/Think-and-Dev/rskswap-periphery/blob/master/contracts/UniswapV2Router02.sol)
 
 # Address
 
@@ -530,7 +530,7 @@ See <Link to='/docs/v2/smart-contracts/library#getamountsin'>getAmountsIn</Link>
 # Interface
 
 ```solidity
-import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol';
+import '@thinkanddev/rskswap-periphery/contracts/interfaces/IUniswapV2Router02.sol';
 ```
 
 ```solidity
@@ -675,7 +675,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 # ABI
 
 ```typescript
-import IUniswapV2Router02 from '@uniswap/v2-periphery/build/IUniswapV2Router02.json'
+import IUniswapV2Router02 from '@thinkanddev/rskswap-periphery/build/IUniswapV2Router02.json'
 ```
 
 [https://unpkg.com/@uniswap/v2-periphery@1.1.0-beta.0/build/IUniswapV2Router02.json](https://unpkg.com/@uniswap/v2-periphery@1.1.0-beta.0/build/IUniswapV2Router02.json)

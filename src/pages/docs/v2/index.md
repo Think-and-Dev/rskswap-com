@@ -14,18 +14,18 @@ Explore the sidebar to find more specific documentation covering other aspects o
 
 ## Developer links
 
-The Uniswap codebase is comprised of an ecosystem of open source components.
+The Rsk Swap codebase is comprised of an ecosystem of open source components.
 
-- [`uniswap-v2-core`](https://github.com/Think-and-Dev/uniswap-v2-core)
-- [`uniswap-v2-periphery`](https://github.com/Think-and-Dev/uniswap-v2-periphery)
-- [`uniswap-frontend-rsk`](https://github.com/Think-and-Dev/uniswap-frontend-rsk)
-- [`uniswap-sdk-rsk`](https://github.com/Think-and-Dev/uniswap-sdk-rsk)
+- [`rskswap-core`](https://github.com/Think-and-Dev/rskswap-core)
+- [`rskswap-periphery`](https://github.com/Think-and-Dev/rskswap-periphery)
+- [`rskswap-frontend`](https://github.com/Think-and-Dev/rskswap-frontend)
+- [`rskswap-sdk`](https://github.com/Think-and-Dev/rskswap-sdk)
 
 ## Reference materials
 
-Get to know the Uniswap SDK and smart contract API objects, methods, attributes, and responses.
+Get to know the Rsk Swap SDK and smart contract API objects, methods, attributes, and responses.
 
 - <Link to="/docs/v2/SDK">SDK</Link>
 - <Link to="/docs/v2/smart-contracts">Smart Contracts</Link>
-- [Whitepaper](/whitepaper.pdf)
+- [Uniswap Whitepaper](/whitepaper.pdf)
 

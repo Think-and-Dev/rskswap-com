@@ -19,7 +19,7 @@ Let's consider the mid price for DOC-WRBTC (that is, the amount of DOC per 1 WET
 The simplest way to get the DOC-WRBTC mid price is to observe the pair directly:
 
 ```typescript
-import { ChainId, Token, WETH, Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token, WETH, Pair } from '@thinkanddev/rskswap-sdk'
 
 const DOC = new Token(ChainId.RSK_MAINNET, '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB', 18)
 
@@ -44,7 +44,7 @@ Finally, you may have noticed that we're formatting the price to 6 significant d
 For the sake of example, let's imagine a direct pair between DOC and WRBTC _doesn't exist_. In order to get a DOC-WRBTC mid price we'll need to pick a valid route. Imagine both DOC and WRBTC have pairs with a third token, RIF. In that case, we can calculate an indirect mid price through the RIF pairs: 
 
 ```typescript
-import { ChainId, Token, WETH, Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token, WETH, Pair } from '@thinkanddev/rskswap-sdk'
 
 const RIF = new Token(ChainId.RSK_MAINNET, '0x2aCc95758f8b5F583470bA265Eb685a8f45fC9D5', 18)
 const DOC = new Token(ChainId.RSK_MAINNET, '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB', 18)
@@ -67,7 +67,7 @@ Mid prices are great representations of the _current_ state of a route, but what
 Imagine we're interested in trading 1 WRBTC for DOC:
 
 ```typescript
-import { ChainId, Token, WETH, Pair, Trade } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token, WETH, Pair, Trade } from '@thinkanddev/rskswap-sdk'
 
 const DOC = new Token(ChainId.RSK_MAINNET, '0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB', 18)
 
