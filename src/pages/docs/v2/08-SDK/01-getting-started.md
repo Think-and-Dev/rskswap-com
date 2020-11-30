@@ -13,6 +13,6 @@ The SDK works for all chains on which the <Link to='/docs/v2/smart-contracts/fac
 
 # Code
 
-The [source code is available on GitHub](https://github.com/Uniswap/uniswap-sdk).
+The [source code is available on GitHub](https://github.com/Think-and-Dev/rskswap-sdk).
 
 
