@@ -1,6 +1,5 @@
 # gatsby files
 .cache/
-public
 
 # dependencies
 .next/
@@ -16,3 +15,4 @@ yarn-error.log
 .env.*
 .firebase
 .firebaserc
+.vscode
